@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Crown hotel</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="index3.less" />
+        <link rel="stylesheet" href="index3.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+        <link rel="stylesheet" href="css/animate.css" />
+
+        <link rel="stylesheet" href="css/owl.carousel.min.css" />
+        <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+        <link rel="stylesheet" href="css/magnific-popup.css" />
+
+        <link rel="stylesheet" href="css/aos.css" />
+
+        <link rel="stylesheet" href="css/ionicons.min.css" />
+
+        <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+        <link rel="stylesheet" href="css/jquery.timepicker.css" />
+
+        <link rel="stylesheet" href="css/flaticon.css" />
+        <link rel="stylesheet" href="css/icomoon.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            @font-face {
+                font-family: "NEXONLv1Gothic" !important;
+                font-weight: 300;
+                src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff")
+                    format("woff");
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "NEXONLv1Gothic" !important;
+                font-weight: 400;
+                src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+                    format("woff");
+                font-style: normal;
+            }
+
+            body {
+                background: 21312c;
+                color: #765729;
+                font-family: "NEXONLv1Gothic" !important;
+                font-weight: 400;
+                position: relative;
+                height: 100vh;
+                background-image: url(../assets/img/bg13.jpg);
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin: 0 auto;
+            }
+            body::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #21312c;
+                z-index: 1500;
+                animation: fadeOut 1s ease-in forwards; /* 초록색 배경이 3초 후에 사라지는 효과 */
+            }
+
+            /* info */
+            .info {
+                color: #765729;
+                font-family: "NEXONLv1Gothic";
+                padding: 20px;
+                position: absolute;
+                left: 45%;
+                top: 43%;
+                z-index: 1502;
+                align-items: center;
+                margin: 0 auto;
+                animation: rotateLogo 1s ease-in-out forwards; /* 로고가 3초 후에 회전하는 효과 */
+            }
+            .info.right {
+                left: auto;
+                right: 0px;
+                top: 0px;
+            }
+            .info h1 {
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 1.6;
+                border-bottom: 1px dashed #fff;
+                display: inline-block;
+                margin-bottom: 10px;
+                transform-origin: center center; /* 로고 회전 축 설정 */
+            }
+            .info h1 a {
+                color: #765729;
+                text-decoration: none;
+                font-weight: 400;
+            }
+            .info p {
+                font-weight: 300;
+                font-size: 16px;
+            }
+            .info li {
+                list-style: none;
+                display: inline;
+            }
+            .info li a {
+                display: inline-block;
+                text-decoration: none;
+                color: #765729;
+                border: 1px dashed #fff;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                line-height: 21px;
+                text-align: center;
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+            .info li.active a {
+                background: #21312c;
+                color: #765729;
+            }
+            .info.left {
+                top: auto;
+                right: 0px;
+                bottom: 0px;
+            }
+            .info.left li {
+                display: block;
+                font-size: 14px;
+                line-height: 1.6;
+                font-weight: 300;
+            }
+
+            /* slider */
+            .slider-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            .slider-img {
+                position: relative;
+                width: 800px;
+                height: 480px;
+            }
+            .slider-img img {
+                width: 100%;
+            }
+            .slider {
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0; /* 초기 투명 상태 */
+                transition: opacity 0.3s ease-in-out; /* 페이드 인/아웃 트랜지션 */
+            }
+
+            /* 로고 회전 애니메이션 */
+            @keyframes rotateLogo {
+                0% {
+                    transform: rotateY(0deg);
+                }
+                100% {
+                    transform: rotateY(180deg);
+                    opacity: 0;
+                } /* 로고가 180도 회전 후 투명도 조절 */
+            }
+
+            @keyframes fadeOut {
+                0% {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                40% {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                100% {
+                    opacity: 0;
+                    visibility: hidden;
+                } /* 로고가 180도 회전 후 투명도 조절 */
+            }
+        </style>
+        <style>
+            .selector {
+                margin: 10px 20px;
+                padding: 5px 10px 15px 20px;
+                font-family: Arial, sans-serif;
+                margin-left: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="info">
+            <img width="100px" src="/img/logo.png" />
+        </div>
+
+        <nav
+            class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+            id="ftco-navbar"
+        >
+            <div class="container">
+                <a class="navbar-brand" href="index.html"
+                    ><img width="30px" src="/img/am_logo_green.png" />
+                    &nbsp;Crown hotel</a
+                >
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#ftco-nav"
+                    aria-controls="ftco-nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="oi oi-menu"></span> Menu
+                </button>
+                <div class="col-xl-2 col-lg-2"></div>
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="plans.html" class="nav-link">예약하기</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                마이페이지 <i class="ti-angle-down"></i>
+                            </a>
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="navbarDropdown"
+                            >
+                                <a class="dropdown-item" href="myBookList.html"
+                                    >내예약리스트 페이지</a
+                                >
+                                <a class="dropdown-item" href="getMyRo.html"
+                                    >내방 예약 자세히보기</a
+                                >
+                                <a class="dropdown-item" href="getMyRoomBook.html"
+                                    >내시설 예약 자세히보기</a
+                                >
+                                <a class="dropdown-item" href="getRoomCancleList.html"
+                                    >내시설 취소 자세히보기</a
+                                >
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                시설소개 <i class="ti-angle-down"></i>
+                            </a>
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="navbarDropdown"
+                            >
+                                <a class="dropdown-item" href="bookRoom.html"
+                                    >방예약 페이지</a
+                                >
+                                <a class="dropdown-item" href="bookFacility.html"
+                                    >시설예약페이지</a
+                                >
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                고객센터 <i class="ti-angle-down"></i>
+                            </a>
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="navbarDropdown"
+                            >
+                                <a class="dropdown-item" href="getCsList.html"
+                                    >1:1문의 리스트</a
+                                >
+                                <a class="dropdown-item" href="getCs.html"
+                                    >1:1문의 자세히보기</a
+                                >
+                                <a class="dropdown-item" href="insertCs.html"
+                                    >1:1문의 작성하기</a
+                                >
+                                <a class="dropdown-item" href="updateCs.htmls"
+                                    >1:1문의 수정하기</a
+                                >
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                관리자 페이지<i class="ti-angle-down"></i>
+                            </a>
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="navbarDropdown"
+                            >
+                                <a class="dropdown-item" href="index.html"
+                                    >메인 페이지</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="myBookList.html"
+                                >
+                                    예약 리스트 페이지</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="single-blog.html"
+                                >
+                                    예약 자세히보기</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="single-blog.html"
+                                >
+                                    현재 객실 상황</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="single-blog.html"
+                                >
+                                    현재 시설 상황</a
+                                >
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link">회원로그인</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END nav -->
+        
+        <section class="home-slider owl-carousel">
+            <div
+                class="slider-item"
+                style="background-image: url(images/view\(1\).jpg)"
+            >
+                <div class="overlay"></div>
+                <div class="container">
+                    <div
+                        class="row no-gutters slider-text align-items-center justify-content-center"
+                    >
+                        <div class="col-md-12 ftco-animate text-center">
+                            <div class="text mb-5 pb-3">
+                                <h1 class="mb-3">
+                                    CROWN HOTEL에 오신 것을 환영합니다
+                                </h1>
+                                <h2>호텔 및 리조트</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="slider-item"
+                style="background-image: url(images/view\(2\).jpg)"
+            >
+                <div class="overlay"></div>
+                <div class="container">
+                    <div
+                        class="row no-gutters slider-text align-items-center justify-content-center"
+                    >
+                        <div class="col-md-12 ftco-animate text-center">
+                            <div class="text mb-5 pb-3">
+                                <h1 class="mb-3">
+                                    CROWN HOTEL에 오신 것을 환영합니다
+                                </h1>
+                                <h2>호텔 및 리조트</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="slider-item"
+                style="background-image: url(images/view\(3\).jpg)"
+            >
+                <div class="overlay"></div>
+                <div class="container">
+                    <div
+                        class="row no-gutters slider-text align-items-center justify-content-center"
+                    >
+                        <div class="col-md-12 ftco-animate text-center">
+                            <div class="text mb-5 pb-3">
+                                <h1 class="mb-3">
+                                    CROWN HOTEL에 오신 것을 환영합니다
+                                </h1>
+                                <h2>호텔 및 리조트</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="slider-item"
+                style="background-image: url(images/view\(4\).jpg)"
+            >
+                <div class="overlay"></div>
+                <div class="container">
+                    <div
+                        class="row no-gutters slider-text align-items-center justify-content-center"
+                    >
+                        <div class="col-md-12 ftco-animate text-center">
+                            <div class="text mb-5 pb-3">
+                                <h1 class="mb-3">
+                                    CROWN HOTEL에 오신 것을 환영합니다
+                                </h1>
+                                <h2>우리와 함께하세요</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br /><br />
+        <br><br><br><br><br>
+        
+    <style>
+        h2 {
+            padding-bottom: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        .aside {
+            width: 300px;
+            float: left;
+            padding-bottom: 20px;
+            /* background-color: greenyellow; */
+        }
+
+        .select-grup {
+            width: auto;
+            float: right;
+            text-align: right;
+            /* background-color: gray; */
+        }
+
+        .select-text {
+            color: gray;
+            font-size: 120%;
+            font-weight: bolder;
+            padding: 10px;
+        }
+
+        .select-dropbox {
+            height: 25px;
+            font-size: 16px;
+        }
+
+        .select-textbox {
+            height: 20px;
+        }
+
+        table.board-table {
+            width: 100%;
+            border-spacing: 0;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .board-table th {
+            background: #eee;
+            border-top: 2px solid gray;
+            padding: 5px;
+        }
+
+        .board-table td {
+            border-bottom: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .board-table td {
+            text-align: center;
+        }
+
+        .board-table td:nth-child(2) {
+            text-align: left;
+        }
+
+        .page {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .button {
+            float: right;
+            text-align: center;
+        }
+
+        .button-gray {
+            border: 0px;
+            border-radius: 5px;
+            background-color: gray;
+            color: white;
+            font: 12px 굴림;
+            font-weight: bold;
+            width: 60px;
+            height: 30px;
+        }
+
+        .button-black {
+            border: 0px;
+            border-radius: 5px;
+            background-color: rgb(46, 46, 46);
+            color: white;
+            font: 12px 굴림;
+            font-weight: bold;
+            width: 70px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <div class="container">
+            <h2>게시판</h2>
+
+            <div class="aside">
+                ▷ 총 3개의 게시물이 있습니다.
+            </div>
+
+            <div class="select-grup">
+                <form action="">
+                    <span class="select-text">SELECT</span>
+                    <span>
+                        <select class="select-dropbox">
+                            <option value="s-title">제목</option>
+                            <option value="s-writer">글쓴이</option>
+                            <option value="s-">일시</option>
+                        </select>
+                    </span>
+                    <span>
+                        <input type="text" name="search" class="select-textbox">
+                        <input type="submit" class="button-black" value="검색" />
+                    </span>
+                </form>
+            </div>
+
+            <table class="board-table">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>글쓴이</th>
+                        <th>일시</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>게시글 1 입니다.</td>
+                        <td>김준석</td>
+                        <td>2022-05-16</td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>게시글 2 입니다.</td>
+                        <td>김준석</td>
+                        <td>2022-05-16</td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>게시글 3 입니다.</td>
+                        <td>김준석</td>
+                        <td>2022-05-16</td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="page">
+                <span><a href="#!">◀ 이전</a></span>
+                <span><a href="#!">1</a></span>
+                <span><a href="#!">다음 ▶</a></span>
+            </div>
+
+            <div class="button">
+                <span><input type="button" class="button-gray" value="목록"></span>
+                <span><input type="button" class="button-black" value="글쓰기"></span>
+            </div>
+        </div>
+    </article>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">디럭스 호텔</h2>
+                        <p>
+                            아주 먼 곳, 단어 산맥 뒤, 나라 Vokalia와 Consonantia에서
+                            멀리 떨어져, 눈먼 텍스트들이 살고 있습니다.
+                        </p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate">
+                                <a href="#"><span class="icon-twitter"></span></a>
+                            </li>
+                            <li class="ftco-animate">
+                                <a href="#"><span class="icon-facebook"></span></a>
+                            </li>
+                            <li class="ftco-animate">
+                                <a href="#"><span class="icon-instagram"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">유용한 링크</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="py-2 d-block">블로그</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-2 d-block">객실</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-2 d-block">편의 시설</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-2 d-block">기프트 카드</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">개인정보</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="py-2 d-block">경력</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-2 d-block">회사 소개</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-2 d-block">문의하기</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-2 d-block">서비스</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">질문이 있으신가요?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li>
+                                    <span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                 
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 로더 -->
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+        </svg>
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
