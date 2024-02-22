@@ -10,8 +10,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.hotel.Hotel.member.Member;
-
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

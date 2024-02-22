@@ -32,11 +32,11 @@
 				<td th:text="${paging.getTotalElements - (paging.number * paging.size) - loop.index}"> </td>
 				 -->
 				<td>
-					<a th:href="@{|/getReservation/${reservation.mid}| }" 
+					<a th:href="@{|/reservationDetail/${reservation.seq}| }" 
 					th:text="${reservation.seq}"> </a>
 				</td> 
 				<td>
-					<span th:if="${reservation.mid != null}" th:text="${reservation.mid}"> </span>
+					<span th:if="${reservation.member.mid != null}" th:text="${reservation.member.mid}"> </span>
 				</td>
 				
 				<td type="date" th:text="${reservation.sdate}"></td> 

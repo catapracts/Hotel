@@ -4,8 +4,6 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.hotel.Hotel.member.Member;
-
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,10 +12,6 @@ import lombok.Setter;
 @Getter @Setter 
 public class ReservationCreateForm 
 {
-	Member m = new Member();
-	
-	private String mid;
-	
 	private int rid;
 	
 	private int fid;

@@ -2,22 +2,22 @@
 
 <div layout:fragment="content" class="container my-3">
     <!-- 질문 -->
-    <h2 class="border-bottom py-2" th:text="${reservation.mid}"></h2>
+    <h2 class="border-bottom py-2" th:text="${reservation.seq}"></h2>
     <div class="card my-3">
         <div class="card-body">
         	<!-- 마크다운 라이브러리를 통해서 출력  -->
         
-            <div class="card-text" style="white-space: pre-line;" th:utext="${@commonUtil.markdown(reservation.mid)}"></div>
+            <div class="card-text" style="white-space: pre-line;" th:utext="${@commonUtil.markdown(reservation.seq)}"></div>
             <div class="d-flex justify-content-end">
 
-       	        <div th:if="${reservation.rid != null}" class="badge bg-light text-dark  p-2 text-start mx-3">
+       	        <div th:if="${reservation.room.rid != null}" class="badge bg-light text-dark  p-2 text-start mx-3">
             		<div class="mb-2"> 예약한 방 번호 </div>
-            		<div th:text="${reservation.rid}"></div>
+            		<div th:text="${reservation.room.rid}"></div>
             	</div>
             	
-       	        <div th:if="${reservation.fid != null}" class="badge bg-light text-dark  p-2 text-start mx-3">
+       	        <div th:if="${reservation.facility.fid != null}" class="badge bg-light text-dark  p-2 text-start mx-3">
             		<div class="mb-2"> 예약한 시설 번호 </div>
-            		<div th:text="${reservation.fid}"></div>
+            		<div th:text="${reservation.facility.fid}"></div>
             	</div>            	
 
             	<!-- 글 수정 날짜 추가 -->
@@ -41,18 +41,18 @@
             <div class = "my-3">
             	
             
-            	<a th:href="@{|/updateReservation/${reservation.mid}|}" 
+            	<a th:href="@{|/updateReservation/${reservation.seq}|}" 
             		th:if ="${reservation.seq != null and 
-            			#authentication.getPrincipal().getUsername() == reservation.mid}"           	
+            			#authentication.getPrincipal().getUsername() == reservation.member.mid}"           	
             		th:text ="수정"
             		class="btn btn-sm btn-outline-secondary"
             	>          	
 	           	</a> 
 	           	<a 
 	           		href="javascript:void(0)"
-	           	    th:data-uri="@{|/deleteReservation/${reservation.mid}|}"	           		
+	           	    th:data-uri="@{|/deleteReservation/${reservation.seq}|}"	           		
             		th:if ="${reservation.seq != null and 
-            			#authentication.getPrincipal().getUsername() == reservation.mid}"
+            			#authentication.getPrincipal().getUsername() == reservation.member.mid}"
 	           		th:text="삭제"
 	           		class="delete btn btn-sm btn-outline-secondary"
 	           	>	           	

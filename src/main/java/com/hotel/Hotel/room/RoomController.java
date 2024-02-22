@@ -222,7 +222,7 @@ public class RoomController
 		// 삭제됨 
 		roomService.delete(m.getRid()); 
 
-		return "redirect:http://localhost:9000/room_list"; 
+		return "redirect:http://localhost:9000/roomList"; 
 	}
 	
 }
