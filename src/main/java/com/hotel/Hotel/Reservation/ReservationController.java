@@ -15,10 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.hotel.Hotel.facility.FacilityService;
 import com.hotel.Hotel.member.Member;
 import com.hotel.Hotel.member.MemberService;
-import com.hotel.Hotel.room.RoomService;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -32,8 +30,6 @@ public class ReservationController
 {
 	private final ReservationService reservationService;
 	private final MemberService memberService;
-	private final FacilityService facilityService;
-	private final RoomService roomService;
 	
 	
 	//전체 예약 목록
@@ -75,7 +71,6 @@ public class ReservationController
 		System.out.println(seq);
 		Reservation reservation = reservationService.getReservation(seq);
 		
-		System.out.println(seq);
 		System.out.println(reservation.getSeq());
 		
 		model.addAttribute("reservation" , reservation);
@@ -119,7 +114,7 @@ public class ReservationController
 		{
 			reservationService.createReservation
 			(
-					reservationCreateForm.getMid(),
+					member,
 					reservationCreateForm.getRid(),
 					reservationCreateForm.getFid(),
 					reservationCreateForm.getSdate(),
@@ -147,17 +142,17 @@ public class ReservationController
 	}
 	
 	//수정
-	@GetMapping("/updateReservation/{mid}")
-	public String reservationUpdate
+	@GetMapping("/updateReservation/{seq}")
+	public String updateReservation
 	(
 			ReservationForm reservationForm,
-			@PathVariable("mid") String mid, 
+			@PathVariable("seq") int seq, 
 			Principal principal	
 	)
 	{
-		Reservation r = reservationService.getReservation(mid);
-		reservationForm.setRid(r.getRid());
-		reservationForm.setFid(r.getFid());
+		Reservation r = reservationService.getReservation(seq);
+		reservationForm.setRid(r.getRoom().getRid());
+		reservationForm.setFid(r.getFacility().getFid());
 		reservationForm.setSdate(r.getSdate());
 		reservationForm.setEdate(r.getEdate());
 		reservationForm.setCnt(r.getCnt());
@@ -168,12 +163,12 @@ public class ReservationController
 
 	//수정된 내용을 받아서 DB에 저장 , save() 기존의 question 객체를 끄집어내서 수정후 저장 
 	// http://localhost:9000/reservation/update/id
-	@PostMapping("/updateReservation/{mid}")
-	public String reservationUpdate
+	@PostMapping("/updateReservation/{seq}")
+	public String updateReservation
 	(
 			ReservationForm reservationForm,
 			BindingResult bindingResult,
-			@PathVariable("mid") String mid, 
+			@PathVariable("seq") int seq, 
 			Principal principal	
 	)
 	{
@@ -186,7 +181,7 @@ public class ReservationController
 		Reservation r = reservationService.getReservation(seq);
 		reservationService.updateReservation
 		(
-				mid, 
+				r, 
 				reservationForm.getRid(), 
 				reservationForm.getFid(),
 				reservationForm.getSdate(),
@@ -195,29 +190,28 @@ public class ReservationController
 		);
 		
 		//수정 이후에 이동할 페이지
-		return String.format("redirect:/reservation/"
-				+ "getList/%s", mid);
+		return "redirect:/getReservationList";
 	}
 	
 	//삭제
-	@GetMapping("/deleteReservation/{mid}")
-	public String reservationDelete
+	@GetMapping("/deleteReservation/{seq}")
+	public String deleteReservation
 	(
-			@PathVariable("mid") String mid, 
+			@PathVariable("seq") int seq, 
 			Principal principal 
 	)
 	{
-		Reservation r = reservationService.getReservation(mid);
+		Reservation r = reservationService.getReservation(seq);
 		
-		if(! principal.getName().equals(r.getMid()))
+		if(! principal.getName().equals(r.getMember().getMid()))
 		{
 			// 예외를 강제로 발생 김 
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "삭제할 권한이 없습니다. ");
 		}
 		
-		reservationService.deleteReservation(mid);
+		reservationService.deleteReservation(r);
 		
-		return "redirect:/";
+		return "redirect:/getReservationList";
 	}
 	
 	

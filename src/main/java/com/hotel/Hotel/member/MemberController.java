@@ -101,6 +101,12 @@ public class MemberController
 	{
 		return "redirect:/";
 	}
+	
+	@GetMapping("/admin")
+	public String admin()
+	{
+		return "admin_form";
+	}
 
 
 	//http://localhost:9000/memberList
@@ -175,7 +181,8 @@ public class MemberController
 		System.out.println(principal.getName());
 		
 		
-		Member m = memberService.getMember(seq); 
+		Member m = memberService.getMember(seq);
+		System.out.println(m.getRole());
 		
 		/*
 		System.out.println("컨트롤러에서 제목 출력 : " + q.getSubject());
@@ -215,6 +222,7 @@ public class MemberController
 		// 수정된 값을 DB에 저장하는 Service 메소드 호출 
 			//수정할 Question 객체를 끄집어냄 
 		Member m = memberService.getMember(seq);
+		System.out.println(m.getRole());
 		memberService.update
 		(
 				seq,
@@ -239,7 +247,8 @@ public class MemberController
 		System.out.println("=====로그인 정보를 출력함 =======");
 		System.out.println(principal.getName());
 		// id 값을 가지고 Question 객체 
-		Member m = memberService.getMember(seq); 
+		Member m = memberService.getMember(seq);
+		System.out.println(m.getRole());
 		
 		// URL를 사용해서 삭제 할 수 없도록 한다. 
 		//현재 로그온한 계정과 DB의 저장된 username 과 같지 않을때 예외 발생 
@@ -252,11 +261,12 @@ public class MemberController
 		// 삭제됨 
 		memberService.delete(m); 
 		
-		if (principal.getName()!=null) {
+		if (principal.getName()!=null) 
+		{
 			return "redirect:http://localhost:9000/logout"; 
 		}
 				
-		return "redirect:/" ; 
+		return "redirect:/";
 	}
 
 	
@@ -277,7 +287,7 @@ public class MemberController
 		
 		System.out.println(seq);
 		System.out.println(m.getMid());
-		
+		System.out.println(m.getRole());
 		
 		// model 에 담아서 client로 전송 
 		model.addAttribute("member" , m); 
