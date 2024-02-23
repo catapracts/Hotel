@@ -17,23 +17,31 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/signup}">회원가입</a>
+                    <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/signup}">회원가입</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/memberList}">회원 CRUD</a>
+                    <a class="nav-link" sec:authorize="hasAnyAuthority('ROLE_ADMIN')" th:href="@{/memberList}">회원 CRUD</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/roomList}">방 CRUD</a>
+                    <a class="nav-link" sec:authorize="hasAnyAuthority('ROLE_ADMIN')" th:href="@{/roomList}">방 CRUD</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/facilityList}">시설 CRUD</a>
+                    <a class="nav-link" sec:authorize="hasAnyAuthority('ROLE_ADMIN')" th:href="@{/facilityList}">시설 CRUD</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/getReservationList}">예약 CRUD</a>
+                    <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/getReservationList}">예약 CRUD</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/getRoomReservationList}">방 예약 CRUD</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/getFacilityReservationList}">시설 예약 CRUD</a>
                 </li>
                 
                 

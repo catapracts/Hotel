@@ -1,0 +1,43 @@
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container">
+
+	<h5 class="my-3 border-bottom pb-2">예약 생성</h5>
+	<!-- 질문등록 , 질문 수정  
+    <form th:action="@{/question/create}" method="post" th:object="${questionForm}">
+	    th: action 을 생략 하면 URL 주소로 action 값이 들어감
+			 form 의 method = "post" 설정이 있으므로 post 방식으로 넘어감.  
+		   - csrf 값이 할당 되지 않음. 명시적으로 csrf 설정을 해주어야 함.  
+	-->
+    <form th:action="@{/createFacilityReservation}"  method="post" th:object="${facilityReservationCreateForm}">
+    	<input type="hidden" th:name="${_csrf.parameterName}" 
+    		th:value="${_csrf.token}">
+   
+    	<!-- 
+    	<div class="alert alert-danger" role="alert" th:if ="${#fields.hasAnyErrors()}">
+    		<div th:each ="err : ${#fields.allErrors()}" th:text="${err}"> </div>
+       	</div>
+        -->
+         <div th:replace="~{form_errors:: formErrorsFragment}"> </div> 
+        
+        
+        <div class="mb-3">
+            <label for="fid" class="form-label">시설 번호</label>
+            <textarea th:field="*{fid}" class="form-control" rows="10"></textarea>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="date" class="form-label">예약 날짜</label>
+			<input type="date" th:field="*{date}" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+            <label for="cnt" class="form-label">예약 인원 수</label>
+            <textarea th:field="*{cnt}" class="form-control" rows="10"></textarea>
+        </div>
+        
+        <input type="submit" value="생성" class="btn btn-primary my-2">
+    </form>
+
+</div>
+</html>
