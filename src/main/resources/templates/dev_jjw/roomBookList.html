@@ -1,4 +1,4 @@
-<html layout:decorate="~{admin_layout}">
+<html layout:decorate="~{/dev_jjw/admin_layout}">
 
 
 <th:block layout:fragment="content">
@@ -34,40 +34,50 @@
 						</thead>
 						<tbody>
 							<tr th:each="reservation, loop:${paging}">
-								<td><a th:href="@{|/reservation/detail/${reservation.seq}|}"
+								<td><a th:href="@{|/reservationDetail/${reservation.seq}|}"
 									th:text="${reservation.seq}"></a></td>
-								<td th:text="${reservation.mid}"></td>
-								<td th:text="${reservation.rid}"></td>
-								<td th:text="${reservation.fid}"></td>
+								<td th:if="${reservation.member.mid != null}" th:text="${reservation.member.mid}"></td>
 								<td th:text="${reservation.sdate}"></td>
 								<td th:text="${reservation.edate}"></td>
 								<td th:text="${reservation.cnt}"></td>
+								<td th:text="${reservation.room}"></td>
+								<td th:text="${reservation.facility}"></td>
 							</tr>
 						</tbody>
 					</table>
-
+<!-- --> 
 					<!-- 페이징처리 시작 -->
 					<div th:if="${!paging.isEmpty()}">
 						<ul class="pagination justify-content-center">
 							<li class="page-item"
 								th:classappend="${!paging.hasPrevious} ? 'disabled'"><a
 								href="javascript:void(0)" class="page-link"
-								th:href="@{|?page=${paging.number-1}|}"> <span>이전</span>
+								th:data-page="${paging.number-1}"> <span>이전</span>
 							</a></li>
 
 							<!-- 조건을 적용해서 현재 페이지에서 이전 5개 이후 5개  -->
 							<li th:each="page: ${#numbers.sequence(0, paging.totalPages-1)}"
 								th:if="${page >= paging.number-5 and page <= paging.number+5 }"
 								th:classappend="${page == paging.number} ? 'active'"
-								class="page-item"><a th:text="${page}" class="page-link"
-								th:href="@{|?page=${page}|}"></a></li>
+								class="page-item"><a href="javascript:void(0)"
+								th:text="${page}" class="page-link" th:data-page="${page}"></a>
+							</li>
 							<li class="page-item"
 								th:classappend="${!paging.hasNext} ? 'disabled'"><a
-								class="page-link" th:href="@{|?page=${paging.number+1}|}"> <span>다음</span>
+								href="javascript:void(0)" class="page-link"
+								th:data-page="${paging.number+1}"> <span>다음</span>
 							</a></li>
 						</ul>
 					</div>
 					<!-- 페이징처리 끝 -->
+
+					<!-- 검색시 변수 값을 hidden 에 적용해서 서버로 전송  -->
+					<form th:action="@{/roomBookList}" method="get"
+						id="searchForm">
+						<input type="hidden" name="kw" id="kw" th:value="${kw}"> <input
+							type="hidden" name="page" id="page" th:value="${paging.number}">
+					</form>
+					<!-- -->
 				</div>
 			</div>
 		</div>
@@ -75,45 +85,23 @@
 	<!-- /.container-fluid -->
 	<!-- End of Main Content -->
 
-	<!-- Footer -->
-	<footer class="sticky-footer bg-white">
-		<div class="container my-auto">
-			<div class="copyright text-center my-auto">
-				<span>Copyright &copy; Your Website 2020</span>
-			</div>
-		</div>
-	</footer>
-	<!-- End of Footer -->
-
-	<!-- Scroll to Top Button-->
-	<a class="scroll-to-top rounded" href="#page-top"> <i
-		class="fas fa-angle-up"></i>
-	</a>
-
-	<!-- Logout Modal-->
-	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?
-					</h5>
-					<button class="close" type="button" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body">Select "Logout" below if you are ready
-					to end your current session.</div>
-				<div class="modal-footer">
-					<button class="btn btn-secondary" type="button"
-						data-dismiss="modal">Cancel</button>
-					<a class="btn btn-primary" href="login.html">Logout</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
 </th:block>
+
+<script layout:fragment="script" type='text/javascript'>
+	const page_elements = document.getElementsByClassName("page-link");
+	Array.from(page_elements).forEach(function(element) {
+		element.addEventListener('click', function() {
+			document.getElementById('page').value = this.dataset.page;
+			document.getElementById('searchForm').submit();
+		});
+	});
+	const btn_search = document.getElementById("btn_search");
+	btn_search.addEventListener('click', function() {
+		document.getElementById('kw').value = document
+				.getElementById('search_kw').value;
+		document.getElementById('page').value = 1; // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+		document.getElementById('searchForm').submit();
+	});
+</script>
 
 </html>

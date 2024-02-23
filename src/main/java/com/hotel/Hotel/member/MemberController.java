@@ -102,11 +102,11 @@ public class MemberController
 		return "redirect:/";
 	}
 	
-	@GetMapping("/admin")
-	public String admin()
-	{
-		return "admin_form";
-	}
+//	@GetMapping("/admin")
+//	public String admin()
+//	{
+//		return "admin_form";
+//	}
 
 
 	//http://localhost:9000/memberList

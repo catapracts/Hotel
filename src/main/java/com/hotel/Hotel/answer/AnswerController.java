@@ -43,7 +43,7 @@ public class AnswerController {
 		if (bindingResult.hasErrors()) {
 
 			model.addAttribute("question", question);
-			return "getQuestion";
+			return "getCs";
 
 			// 메세지 출력 안하고 새롭게 리다이렉트로 이동됨
 			// return String.format("redirect:/question/detail/%s", id);

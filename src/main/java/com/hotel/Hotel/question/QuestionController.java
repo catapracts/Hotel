@@ -33,7 +33,7 @@ public class QuestionController {
 
 	// 질문 등록 하기 : 글 등로 뷰 페이지만 전송
 	// http://localhost:8585/question/create
-	@GetMapping("/create")
+	@GetMapping("/createQuestion")
 	public String create(QuestionForm QuestionForm) {
 		return "insertCs";
 	}
@@ -43,7 +43,7 @@ public class QuestionController {
 	// <=== Spring Security 설정 :SecurityConfig.java ,
 	// @EnableMethodSecurity(prePostEnabled=true)
 	// @PreAuthorize("isAuthenticated()")
-	@PostMapping("/create")
+	@PostMapping("/createQuestion")
 	public String create(
 //					@RequestParam("title") String title, 
 //					@RequestParam("content") String content
@@ -66,7 +66,7 @@ public class QuestionController {
 	}
 
 	// http://localhost:8585/Cs/list
-	@GetMapping("/list")
+	@GetMapping("/getQuestionList")
 	// @ResponseBody
 	public String getList(Model model, @RequestParam(value = "page", defaultValue = "0") int page
 //		@RequestParam(value = "kw", defaultValue = "") String kw
@@ -104,7 +104,7 @@ public class QuestionController {
 	}
 
 	// 상세 글 조회
-	@GetMapping("/detail/{qid}")
+	@GetMapping("/getQuestion/{qid}")
 	public String get(Model model, @PathVariable("qid") Integer qid, QuestionForm questionForm) {
 
 		System.out.println(qid);
@@ -122,7 +122,7 @@ public class QuestionController {
 
 	// 질문 정보를 가져와서 뷰 페이지로 값을 넣어줌
 	// http://localhost:8585/question/modify/1
-	@GetMapping("/update/{qid}")
+	@GetMapping("/updateQuestion/{qid}")
 	public String update(
 			QuestionForm QuestionForm,
 			@PathVariable("qid") Integer qid, Principal principal) {
@@ -147,7 +147,7 @@ public class QuestionController {
 
 	// 질문 수정된 내용을 받아서 DB에 저장 , save() 기존의 question 객체를 끄집어내서 수정후 저장
 	// http://localhost:8585/question/modify/1
-	@PostMapping("/update/{qid}")
+	@PostMapping("/updateQuestion/{qid}")
 	public String update
 	(
 			@Valid QuestionForm QuestionForm, 
@@ -172,7 +172,7 @@ public class QuestionController {
 	}
 
 	// 삭제 요청에 대한 처리
-	@GetMapping("/delete/{qid}")
+	@GetMapping("/deleteQuestion/{qid}")
 	public String delete(@PathVariable("qid") Integer qid, Principal principal) 
 	{
 		// id 값을 가지고 Question 객체
