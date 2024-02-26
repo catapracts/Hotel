@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Crown hotel</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="index3.less" />
+    <link rel="stylesheet" href="index3.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+
+    <style>
+@font-face {
+  font-family: 'SDSamliphopangche_Outline';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+font-family: 'SDSamliphopangche_Outline';
+}	  .p111{
+font-family: 'SDSamliphopangche_Outline';
+          }
+    </style>
+  </head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
+  th:fragment="navbarFragment">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img width="30px" src="/img/logo(footerlogo).png" />
+        &nbsp;Crown hotel</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="col-xl-2 col-lg-2"></div>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="adminindex.html" class="nav-link">관리자</a>
+          </li>
+          <li class="nav-item">
+            <a href=".html" class="nav-link">예약</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+            id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" 
+              aria-expanded="false"
+              >
+              방 <i class="ti-angle-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="room_list.html"> 방 소개</a>
+
+              <a class="dropdown-item" href="room_classic.html">Classic</a>
+              <a class="dropdown-item" href="room_deluxe.html">Deluxe</a>
+              <a class="dropdown-item" href="room_family.html">Family</a>
+              <a class="dropdown-item" href="room_superior.html">Superior</a>
+              <a class="dropdown-item" href="room_suite.html">Suite</a>
+              <a class="dropdown-item" href="room_luxury.html">Luxury</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              시설 <i class="ti-angle-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="facility_list.html">시설소개</a>
+
+              <a class="dropdown-item" href="facility_pool.html">수영장</a>
+              <a class="dropdown-item" href="facility_restaurant.html">식당</a>
+              <a class="dropdown-item" href="facility_golf.html">골프장</a>
+
+              <a class="dropdown-item" href="facilityhelth.html">헬스장</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              고객센터 <i class="ti-angle-down"></i>
+            </a>
+          
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              마이 페이지<i class="ti-angle-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="index.html">메인 페이지</a>
+              <a class="dropdown-item" href="myBookList.html">
+                예약 리스트 페이지</a>
+              <a class="dropdown-item" href="getMyRoomBook.html">
+                예약 자세히보기</a>
+              <a class="dropdown-item" href="getROomStatus.html">
+                현재 객실 상황</a>
+              <a class="dropdown-item" href="getFacilityStaus.html">
+                현재 시설 상황</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">로그인</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="signUp.html" class="nav-link">로그아웃</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  <body>
+    
+      <div class="info">
+          <img width="100px" src="/img/logo.png" />
+      </div>
+
+    <!-- END nav -->
+
+    <th:block layout:fragment="content">
+		<section class="home-slider owl-carousel">
+			<div class="slider-item" style="background-image: url(images/view\(1\).jpg)">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center justify-content-center">
+						<div class="col-md-12 ftco-animate text-center">
+							<div class="text mb-5 pb-3">
+								<h1 class="mb-3">
+									CROWN HOTEL에 오신 것을 환영합니다
+								</h1>
+								<h2>호텔 및 리조트</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-item" style="background-image: url(images/view\(2\).jpg)">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center justify-content-center">
+						<div class="col-md-12 ftco-animate text-center">
+							<div class="text mb-5 pb-3">
+								<h1 class="mb-3">
+									CROWN HOTEL에 오신 것을 환영합니다
+								</h1>
+								<h2>우리와 함께하세요</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-item" style="background-image: url(images/view\(3\).jpg)">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center justify-content-center">
+						<div class="col-md-12 ftco-animate text-center">
+							<div class="text mb-5 pb-3">
+								<h1 class="mb-3">
+									CROWN HOTEL에 오신 것을 환영합니다
+								</h1>
+								<h2>최고의 시설, 매너</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider-item" style="background-image: url(images/view\(4\).jpg)">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center justify-content-center">
+						<div class="col-md-12 ftco-animate text-center">
+							<div class="text mb-5 pb-3">
+								<h1 class="mb-3">
+									CROWN HOTEL에 오신 것을 환영합니다
+								</h1>
+								<h2>차별화된 호텔</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<br /><br />
+
+    <main>
+      <style>
+      
+        body{
+          background-color: darkslategrey;
+        }
+        .form-control,
+        .form-select {
+          border-color: var(--border-color);
+          color: var(--color-900);
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          font-size: 15px;
+        }
+
+        .btn.btn-primary {
+          background-color: var(--primary-color);
+          border-color: var(--primary-color);
+        }
+
+        .card {
+          background-color: var(--card-color);
+          border: 0;
+          background-color: rgb(2, 87, 87);
+
+        }
+      </style>
+      <div class="container">
+        <div class="card p-4 mt-5">
+          <div class="row g-3">
+            <div class="col-12 mb-4">
+              <h4>마일리지 예약</h4>
+              <span class="text-muted"
+                >가능한 한 빨리 프리미엄 요금제의 모든 기능을 누릴 수 있도록 결제해 주시기 바랍니다</span
+              >
+            </div>
+            <div class="col-12">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="Roundtrip"
+                  value="option1"
+                />
+                <label class="form-check-label" for="Roundtrip"
+                  >왕복</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="Oneway"
+                  value="option2"
+                />
+                <label class="form-check-label" for="Oneway">편도</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="MultiCity"
+                  value="option3"
+                />
+                <label class="form-check-label" for="MultiCity"
+                  >경유</label
+                >
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="FLYING FROM"
+                />
+                <label>출발지</label>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="FLYING TO"
+                />
+                <label>도착지</label>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="form-floating">
+                <input
+                  type="date"
+                  class="form-control"
+                  placeholder="DEPARTING"
+                />
+                <label>출국 날짜</label>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="form-floating">
+                <input
+                  type="date"
+                  class="form-control"
+                  placeholder="RETURNING"
+                />
+                <label>귀국 날짜</label>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="form-floating">
+                <select class="form-select">
+                  <option selected="" hidden="">인원 수</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label>성인(18+)</label>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="form-floating">
+                <select class="form-select">
+                  <option selected="" hidden="">인원 수</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label>아동(0-17)</label>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="form-floating">
+                <select class="form-select">
+                  <option selected="" hidden="">선택하시오.</option>
+                  <option value="1">이코노미</option>
+                  <option value="2">프리미엄</option>
+                  <option value="3">비즈니스</option>
+                </select>
+                <label>객석</label>
+              </div>
+            </div>
+            <div class="col-12 mt-4">
+              <button class="btn btn-secondary text-uppercase" type="button">
+                지우기
+              </button>
+              <button class="btn btn-primary text-uppercase" type="button">
+                항공편 보기<i class="fa fa-plane ms-3"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="container-fluid px-0 px-sm-4 mx-auto">
+      <style>
+        body {
+          color: #000;
+          overflow-x: hidden;
+          height: 100%;
+          background-color: #c5cae9 !important;
+          background-repeat: no-repeat;
+          padding: 0px !important;
+        }
+
+        .container-fluid {
+          padding-top: 120px !important;
+          padding-bottom: 120px !important;
+        }
+
+        .card {
+          box-shadow: 0px 4px 8px 0px #7986cb;
+        }
+
+        input {
+          padding: 10px 20px !important;
+          border: 1px solid #000 !important;
+          border-radius: 10px;
+          box-sizing: border-box;
+          background-color: #616161 !important;
+          color: #fff !important;
+          font-size: 16px;
+          letter-spacing: 1px;
+          width: 180px;
+        }
+
+        input:focus {
+          -moz-box-shadow: none !important;
+          -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+          border: 1px solid #512da8;
+          outline-width: 0;
+        }
+
+        ::placeholder {
+          color: #fff;
+          opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+          color: #fff;
+        }
+
+        ::-ms-input-placeholder {
+          color: #fff;
+        }
+
+        button:focus {
+          -moz-box-shadow: none !important;
+          -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+          outline-width: 0;
+        }
+
+        .datepicker {
+          background-color: #000 !important;
+          color: #fff !important;
+          border: none;
+          padding: 10px !important;
+        }
+
+        .datepicker-dropdown:after {
+          border-bottom: 6px solid #000;
+        }
+
+        thead tr:nth-child(3) th {
+          color: #fff !important;
+          font-weight: bold;
+          padding-top: 20px;
+          padding-bottom: 10px;
+        }
+
+        .dow,
+        .old-day,
+        .day,
+        .new-day {
+          width: 40px !important;
+          height: 40px !important;
+          border-radius: 0px !important;
+        }
+
+        .old-day:hover,
+        .day:hover,
+        .new-day:hover,
+        .month:hover,
+        .year:hover,
+        .decade:hover,
+        .century:hover {
+          border-radius: 6px !important;
+          background-color: #eee;
+          color: #000;
+        }
+
+        .active {
+          border-radius: 6px !important;
+          background-image: linear-gradient(#90caf9, #64b5f6) !important;
+          color: #000 !important;
+        }
+
+        .disabled {
+          color: #616161 !important;
+        }
+
+        .prev,
+        .next,
+        .datepicker-switch {
+          border-radius: 0 !important;
+          padding: 20px 10px !important;
+          text-transform: uppercase;
+          font-size: 20px;
+          color: #fff !important;
+          opacity: 0.8;
+        }
+
+        .prev:hover,
+        .next:hover,
+        .datepicker-switch:hover {
+          background-color: inherit !important;
+          opacity: 1;
+        }
+
+        .cell {
+          border: 1px solid #bdbdbd;
+          margin: 2px;
+          cursor: pointer;
+        }
+
+        .cell:hover {
+          border: 1px solid #3d5afe;
+        }
+
+        .cell.select {
+          background-color: #3d5afe;
+          color: #fff;
+        }
+
+        .fa-calendar {
+          color: #fff;
+          font-size: 30px;
+          padding-top: 8px;
+          padding-left: 5px;
+          cursor: pointer;
+        }
+      </style>
+      <div class="row justify-content-center mx-0">
+        <div class="col-lg-10">
+          <div class="card border-0">
+            <form autocomplete="off">
+              <div class="card-header bg-dark">
+                <div
+                  class="mx-0 mb-0 row justify-content-sm-center justify-content-start px-1"
+                >
+                  <input
+                    type="text"
+                    id="dp1"
+                    class="datepicker"
+                    placeholder="호텔 픽업 서비스"
+                    name="date"
+                    readonly
+                  /><span class="fa fa-calendar"></span>
+                </div>
+              </div>
+              <div class="card-body p-3 p-sm-5">
+                <div class="row text-center mx-0">
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">00:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">00:30AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">01:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">01:30AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">02:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">02:30AM</div>
+                  </div>
+                </div>
+                <div class="row text-center mx-0">
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">03:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">03:30AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">04:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">04:30AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">05:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">05:30AM</div>
+                  </div>
+                </div>
+                <div class="row text-center mx-0">
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">06:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">06:30AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">07:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">07:30AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">08:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">08:30AM</div>
+                  </div>
+                </div>
+                <div class="row text-center mx-0">
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">09:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">09:30AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">10:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">10:30AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">11:00AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">11:30AM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">12:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">12:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">13:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">13:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">14:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">14:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">15:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">15:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">16:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">16:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">17:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">17:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">18:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">18:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">19:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">19:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">20:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">20:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">21:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">21:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">22:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">22:30PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">23:00PM</div>
+                  </div>
+                  <div class="col-md-2 col-4 my-1 px-2">
+                    <div class="cell py-1">23:30PM</div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">크라운 호텔</h2>
+              <p>
+                당신이 찾던 호텔 <br>
+                최고의 서비스와 최고의 대우로 <br>
+                여러분들의 편의와 만족을 드리는 <br>
+                CROWN HOTEL.
+              </p>
+              <ul
+                class="ftco-footer-social list-unstyled float-md-left float-lft mt-5"
+              >
+                <li class="ftco-animate">
+                  <a href="#"><span class="icon-twitter"></span></a>
+                </li>
+                <li class="ftco-animate">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+                <li class="ftco-animate">
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">유용한 링크</h2>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="py-2 d-block">블로그</a>
+                </li>
+                <li>
+                  <a href="#" class="py-2 d-block">객실</a>
+                </li>
+                <li>
+                  <a href="#" class="py-2 d-block">편의 시설</a>
+                </li>
+                <li>
+                  <a href="#" class="py-2 d-block">기프트 카드</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">개인정보</h2>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="py-2 d-block">경력</a>
+                </li>
+                <li>
+                  <a href="#" class="py-2 d-block">회사 소개</a>
+                </li>
+                <li>
+                  <a href="#" class="py-2 d-block">문의하기</a>
+                </li>
+                <li>
+                  <a href="#" class="py-2 d-block">서비스</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">질문이 있으신가요?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li>
+                    <span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span>
+                  </li>
+                  <li>
+                    <a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+           
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/book.js"></script>
+  </body>
+</html>
