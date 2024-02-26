@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Crown hotel</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="../css/common.css" />
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+        <link rel="stylesheet" href="css/animate.css" />
+
+        <link rel="stylesheet" href="css/owl.carousel.min.css" />
+        <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+        <link rel="stylesheet" href="css/magnific-popup.css" />
+
+        <link rel="stylesheet" href="css/aos.css" />
+
+        <link rel="stylesheet" href="css/ionicons.min.css" />
+
+        <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+        <link rel="stylesheet" href="css/jquery.timepicker.css" />
+
+        <link rel="stylesheet" href="css/flaticon.css" />
+        <link rel="stylesheet" href="css/icomoon.css" />
+        <link rel="stylesheet" href="css/style.css" />
+      
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+
+    <style>
+@font-face {
+  font-family: 'SDSamliphopangche_Outline';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+font-family: 'SDSamliphopangche_Outline';
+}	  .p111{
+font-family: 'SDSamliphopangche_Outline';
+          }
+    </style>
+  </head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
+  th:fragment="navbarFragment">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img width="30px" src="/img/logo(footerlogo).png" />
+        &nbsp;Crown hotel</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="col-xl-2 col-lg-2"></div>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="adminindex.html" class="nav-link">관리자</a>
+          </li>
+          <li class="nav-item">
+            <a href=".html" class="nav-link">예약</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+            id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" 
+              aria-expanded="false"
+              >
+              방 <i class="ti-angle-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="room_list.html"> 방 소개</a>
+
+              <a class="dropdown-item" href="room_classic.html">Classic</a>
+              <a class="dropdown-item" href="room_deluxe.html">Deluxe</a>
+              <a class="dropdown-item" href="room_family.html">Family</a>
+              <a class="dropdown-item" href="room_superior.html">Superior</a>
+              <a class="dropdown-item" href="room_suite.html">Suite</a>
+              <a class="dropdown-item" href="room_luxury.html">Luxury</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              시설 <i class="ti-angle-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="facility_list.html">시설소개</a>
+
+              <a class="dropdown-item" href="facility_pool.html">수영장</a>
+              <a class="dropdown-item" href="facility_restaurant.html">식당</a>
+              <a class="dropdown-item" href="facility_golf.html">골프장</a>
+
+              <a class="dropdown-item" href="facilityhelth.html">헬스장</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              고객센터 <i class="ti-angle-down"></i>
+            </a>
+          
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              마이 페이지<i class="ti-angle-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="index.html">메인 페이지</a>
+              <a class="dropdown-item" href="myBookList.html">
+                예약 리스트 페이지</a>
+              <a class="dropdown-item" href="getMyRoomBook.html">
+                예약 자세히보기</a>
+              <a class="dropdown-item" href="getROomStatus.html">
+                현재 객실 상황</a>
+              <a class="dropdown-item" href="getFacilityStaus.html">
+                현재 시설 상황</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">로그인</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="signUp.html" class="nav-link">로그아웃</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  <body>
+    
+      <div class="info">
+          <img width="100px" src="/img/logo.png" />
+      </div>
+
+        <!-- END nav -->
+        <br>
+        <br><br>
+        <body>
+            <div id="wrap">
+                <div id="container">
+                    <!-- bodytext_area -->
+                    <div class="bodytext_area box_inner">
+                        <!-- myinfo -->
+                        <div class="myinfo">
+                          
+                                <!-- appForm -->
+                                <form action="#" class="regForm">
+                                    <fieldset>
+                                        <legend>내정보 입력 양식</legend>
+                                        <ul class="reg_list">
+                                            <li class="clear">
+                                                <span class="tit_lbl"
+                                                    >이름</span
+                                                >
+                                                <div class="reg_content">
+                                                    홍길동
+                                                </div>
+                                            </li>
+                                            <li class="clear">
+                                                <label class="tit_lbl"
+                                                    >생년월일</label
+                                                >
+                                                <div class="reg_content">
+                                                    20030802
+                                                </div>
+                                            </li>
+                                            <li class="clear">
+                                                <span class="tit_lbl"
+                                                    >성별</span
+                                                >
+                                                <div
+                                                    class="reg_content radio_area"
+                                                >
+                                                    <input
+                                                        type="radio"
+                                                        class="css-radio"
+                                                        id="mmm_lbl"
+                                                        name="gender"
+                                                        checked
+                                                    /><label for="mmm_lbl"
+                                                        >남</label
+                                                    >
+                                                    <input
+                                                        type="radio"
+                                                        class="css-radio"
+                                                        id="www_lbl"
+                                                        name="gender"
+                                                    /><label for="www_lbl"
+                                                        >여</label
+                                                    >
+                                                </div>
+                                            </li>
+                                            <li class="clear">
+                                                <span class="tit_lbl"
+                                                    >주소</span
+                                                >
+                                                <div class="reg_content">
+                                                    자바 풀스택 개발
+                                                </div>
+                                            </li>
+                                            <li class="clear">
+                                                <span class="tit_lbl"
+                                                    >핸드폰</span
+                                                >
+                                                <div class="reg_content">
+                                                    010-1234-5678
+                                                </div>
+                                            </li>
+                                            <li class="clear">
+                                                <span class="tit_lbl"
+                                                    >SMS 수신동의</span
+                                                >
+                                                <div
+                                                    class="reg_content radio_area"
+                                                >
+                                                    <input
+                                                        type="radio"
+                                                        class="css-radio"
+                                                        id="smsyes_lbl"
+                                                        name="smsyesno"
+                                                        checked
+                                                    /><label for="smsyes_lbl"
+                                                        >허용</label
+                                                    >
+                                                    <input
+                                                        type="radio"
+                                                        class="css-radio"
+                                                        id="smsno_lbl"
+                                                        name="smsyesno"
+                                                    /><label for="smsno_lbl"
+                                                        >거부</label
+                                                    >
+                                                    <p class="info_line">
+                                                        (서비스와 관련된 이벤트
+                                                        안내, 고객 혜택 등
+                                                        다양한 정보를
+                                                        제공합니다.)
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="clear">
+                                                <span class="tit_lbl"
+                                                    >이메일</span
+                                                >
+                                                <div class="reg_content">
+                                                    java2022@naver.com
+                                                </div>
+                                            </li>
+                                            <li class="clear">
+                                                <span class="tit_lbl"
+                                                    >이메일 수신동의</span
+                                                >
+                                                <div
+                                                    class="reg_content radio_area"
+                                                >
+                                                    <input
+                                                        type="radio"
+                                                        class="css-radio"
+                                                        id="emailyes_lbl"
+                                                        name="emailyesno"
+                                                        checked
+                                                    /><label for="emailyes_lbl"
+                                                        >허용</label
+                                                    >
+                                                    <input
+                                                        type="radio"
+                                                        class="css-radio"
+                                                        id="emailno_lbl"
+                                                        name="emailyesno"
+                                                    /><label for="emailno_lbl"
+                                                        >거부</label
+                                                    >
+                                                    <p class="info_line">
+                                                        (서비스와 관련된 이벤트
+                                                        안내, 고객 혜택 등
+                                                        다양한 정보를
+                                                        제공합니다.)
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <p class="btn_line">
+                                            <a href="#" class="btn_baseColor"
+                                                >등록</a
+                                            >
+                                        </p>
+                                    </fieldset>
+                                </form>
+                                <!-- //appForm -->
+                            </dd>
+                        </dl>
+                        <!-- //myinfo -->
+                    </div>
+                    <!-- //bodytext_area -->
+                </div>
+            </div>
+        </body>
+
+        <footer class="ftco-footer ftco-bg-dark ftco-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">크라운 호텔</h2>
+                            <p>
+                                당신이 찾던 호텔 <br>
+                                최고의 서비스와 최고의 대우로 <br>
+                                여러분들의 편의와 만족을 드리는 <br>
+                                CROWN HOTEL.
+                            </p>
+                            <ul
+                                class="ftco-footer-social list-unstyled float-md-left float-lft mt-5"
+                            >
+                                <li class="ftco-animate">
+                                    <a href="#"
+                                        ><span class="icon-twitter"></span
+                                    ></a>
+                                </li>
+                                <li class="ftco-animate">
+                                    <a href="#"
+                                        ><span class="icon-facebook"></span
+                                    ></a>
+                                </li>
+                                <li class="ftco-animate">
+                                    <a href="#"
+                                        ><span class="icon-instagram"></span
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4 ml-md-5">
+                          <h2 class="ftco-heading-2">유용한 링크</h2>
+                          <ul class="list-unstyled">
+                            <li>
+                              <a href="#" class="py-2 d-block">블로그</a>
+                            </li>
+                            <li>
+                              <a href="#" class="py-2 d-block">객실</a>
+                            </li>
+                            <li>
+                              <a href="#" class="py-2 d-block">편의 시설</a>
+                            </li>
+                            <li>
+                              <a href="#" class="py-2 d-block">기프트 카드</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                          <h2 class="ftco-heading-2">개인정보</h2>
+                          <ul class="list-unstyled">
+                            <li>
+                              <a href="#" class="py-2 d-block">경력</a>
+                            </li>
+                            <li>
+                              <a href="#" class="py-2 d-block">회사 소개</a>
+                            </li>
+                            <li>
+                              <a href="#" class="py-2 d-block">문의하기</a>
+                            </li>
+                            <li>
+                              <a href="#" class="py-2 d-block">서비스</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                          <h2 class="ftco-heading-2">질문이 있으신가요?</h2>
+                          <div class="block-23 mb-3">
+                            <ul>
+                              <li>
+                                <span class="icon icon-map-marker"></span
+                                ><span class="text"
+                                  >203 Fake St. Mountain View, San Francisco, California,
+                                  USA</span
+                                >
+                              </li>
+                              <li>
+                                <a href="#"
+                                  ><span class="icon icon-phone"></span
+                                  ><span class="text">+2 392 3929 210</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#"
+                                  ><span class="icon icon-envelope"></span
+                                  ><span class="text">info@yourdomain.com</span></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 text-center"></div>
+                    </div>
+                  </div>
+                </footer>
+
+        
+        
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/jquery.timepicker.min.js"></script>
+        <script src="js/scrollax.min.js"></script>
+        <script src="js/google-map.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/jquery.smooth-scroll.min.js"></script>
+    </body>
+</html>
