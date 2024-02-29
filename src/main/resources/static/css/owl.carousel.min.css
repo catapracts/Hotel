@@ -8,14 +8,10 @@
 .room-pic-slider, 
 .single-room-pic img {
     height: auto;
+    margin-top: 100px;
 }
-html, body {
-    height: 100%;
-    font-family: "Taviraj", serif;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    background: none;
-}
+
+
 .owl-carousel.owl-drag .owl-item {
     -ms-touch-action: pan-y;
     touch-action: pan-y;
@@ -41,20 +37,21 @@ body {
 }
 img {
     max-width: 100%;
-}
-img {
+    border-radius: 10px;
     vertical-align: middle;
     border-style: none;
-}
-
-img {
+    border-radius: 10px;
     overflow-clip-margin: content-box;
     overflow: clip;
+    border-radius: 10px;
 }
+
 .owl-carousel,
 .owl-carousel .owl-item {
     -webkit-tap-highlight-color: transparent;
     position: relative;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 .owl-carousel {
     display: none;
@@ -207,8 +204,8 @@ img {
     position: absolute;
     height: 80px;
     width: 80px;
-    left: 50%;
-    top: 50%;
+    left: 100%;
+    top: 100%;
     margin-left: -40px;
     margin-top: -40px;
     background: url(owl.video.play.png) no-repeat;

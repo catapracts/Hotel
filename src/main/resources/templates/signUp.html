@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ko">
     <head>
         <title>Crown hotel</title>
@@ -60,96 +60,100 @@
               }
         </style>
       </head>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
-      th:fragment="navbarFragment">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><img width="30px" src="/img/logo(footerlogo).png" />
-            &nbsp;Crown hotel</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-          </button>
-          <div class="col-xl-2 col-lg-2"></div>
-          <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a href="adminindex.html" class="nav-link">관리자</a>
-              </li>
-              <li class="nav-item">
-                <a href=".html" class="nav-link">예약</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" 
-                id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" 
-                  aria-expanded="false"
-                  >
-                  방 <i class="ti-angle-down"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="room_list.html"> 방 소개</a>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
+        th:fragment="navbarFragment">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"><img width="30px" src="/img/logo(footerlogo).png" />
+              &nbsp;Crown hotel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+              aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="col-xl-2 col-lg-2"></div>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="adminindex.html" class="nav-link">관리자</a>
+                </li>
+                <li class="nav-item">
+                  <a href="bookRoom.html" class="nav-link">예약</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" 
+                  id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" 
+                    aria-expanded="false"
+                    >
+                    방 <i class="ti-angle-down"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="room_list.html"> 방 소개</a>
     
-                  <a class="dropdown-item" href="room_classic.html">Classic</a>
-                  <a class="dropdown-item" href="room_deluxe.html">Deluxe</a>
-                  <a class="dropdown-item" href="room_family.html">Family</a>
-                  <a class="dropdown-item" href="room_superior.html">Superior</a>
-                  <a class="dropdown-item" href="room_suite.html">Suite</a>
-                  <a class="dropdown-item" href="room_luxury.html">Luxury</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  시설 <i class="ti-angle-down"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="facility_list.html">시설소개</a>
+                    <a class="dropdown-item" href="room_classic.html">Classic</a>
+                    <a class="dropdown-item" href="room_deluxe.html">Deluxe</a>
+                    <a class="dropdown-item" href="room_family.html">Family</a>
+                    <a class="dropdown-item" href="room_superior.html">Superior</a>
+                    <a class="dropdown-item" href="room_suite.html">Suite</a>
+                    <a class="dropdown-item" href="room_luxury.html">Luxury</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    시설 <i class="ti-angle-down"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="facility_list.html">시설소개</a>
     
-                  <a class="dropdown-item" href="facility_pool.html">수영장</a>
-                  <a class="dropdown-item" href="facility_restaurant.html">식당</a>
-                  <a class="dropdown-item" href="facility_golf.html">골프장</a>
+                    <a class="dropdown-item" href="facility_pool.html">수영장</a>
+                    <a class="dropdown-item" href="facility_restaurant.html">식당</a>
+                    <a class="dropdown-item" href="facility_golf.html">골프장</a>
     
-                  <a class="dropdown-item" href="facilityhelth.html">헬스장</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  고객센터 <i class="ti-angle-down"></i>
-                </a>
-              
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  마이 페이지<i class="ti-angle-down"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="index.html">메인 페이지</a>
-                  <a class="dropdown-item" href="myBookList.html">
-                    예약 리스트 페이지</a>
-                  <a class="dropdown-item" href="getMyRoomBook.html">
-                    예약 자세히보기</a>
-                  <a class="dropdown-item" href="getROomStatus.html">
-                    현재 객실 상황</a>
-                  <a class="dropdown-item" href="getFacilityStaus.html">
-                    현재 시설 상황</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a href="login.html" class="nav-link">로그인</a>
-              </li>
+                    <a class="dropdown-item" href="facilityhelth.html">헬스장</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    고객센터 <i class="ti-angle-down"></i>
+                  </a>
+                
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    마이 페이지<i class="ti-angle-down"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="myPage.html">메인 페이지</a>
+                    <a class="dropdown-item" href="myBookList.html">
+                      예약 리스트 페이지</a>
+                    <a class="dropdown-item" href="getMyRoomBook.html">
+                      예약 자세히보기</a>
+                    
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="login.html" class="nav-link">로그인</a>
+                </li>
     
     
-              <li class="nav-item">
-                <a href="signUp.html" class="nav-link">로그아웃</a>
-              </li>
-            </ul>
+                <li class="nav-item">
+                  <a href="signUp.html" class="nav-link">로그아웃</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
+        <body>
+            <div class="info">
+                <img width="100px" src="/img/logo.png" />
+            </div>
+    
+         
+        <!-- END nav -->
       <body>
         
           <div class="info">
@@ -159,70 +163,7 @@
         <!-- END nav -->
 
         <th:block layout:fragment="content">
-		<section class="home-slider owl-carousel">
-			<div class="slider-item" style="background-image: url(images/view\(1\).jpg)">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row no-gutters slider-text align-items-center justify-content-center">
-						<div class="col-md-12 ftco-animate text-center">
-							<div class="text mb-5 pb-3">
-								<h1 class="mb-3">
-									CROWN HOTEL에 오신 것을 환영합니다
-								</h1>
-								<h2>호텔 및 리조트</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="slider-item" style="background-image: url(images/view\(2\).jpg)">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row no-gutters slider-text align-items-center justify-content-center">
-						<div class="col-md-12 ftco-animate text-center">
-							<div class="text mb-5 pb-3">
-								<h1 class="mb-3">
-									CROWN HOTEL에 오신 것을 환영합니다
-								</h1>
-								<h2>우리와 함께하세요</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="slider-item" style="background-image: url(images/view\(3\).jpg)">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row no-gutters slider-text align-items-center justify-content-center">
-						<div class="col-md-12 ftco-animate text-center">
-							<div class="text mb-5 pb-3">
-								<h1 class="mb-3">
-									CROWN HOTEL에 오신 것을 환영합니다
-								</h1>
-								<h2>최고의 시설, 매너</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="slider-item" style="background-image: url(images/view\(4\).jpg)">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row no-gutters slider-text align-items-center justify-content-center">
-						<div class="col-md-12 ftco-animate text-center">
-							<div class="text mb-5 pb-3">
-								<h1 class="mb-3">
-									CROWN HOTEL에 오신 것을 환영합니다
-								</h1>
-								<h2>차별화된 호텔</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
+		
 		<br /><br />
 <br><br>
     <main>
@@ -236,18 +177,7 @@
         <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">회원가입</label>
         <div class="login-form">
           <div class="sign-in-htm">
-            <div class="group">
-              <label for="user" class="label">아이디</label>
-              <input id="user" type="text" class="input">
-            </div>
-            <div class="group">
-              <label for="pass" class="label">비밀번호</label>
-              <input id="pass" type="password" class="input" data-type="password">
-            </div>
-            <div class="group">
-              <input id="check" type="checkbox" class="check" checked>
-              <label for="check"><span class="icon"></span> 로그인 정보 저장 </label>
-            </div>
+            
             <div class="group">
               <input type="submit" class="button" value="로그인">
             </div>

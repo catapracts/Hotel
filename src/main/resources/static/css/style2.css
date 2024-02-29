@@ -500,9 +500,10 @@ ol {
 }
 
 .room-item {
-	margin-bottom: 40px;
+	margin-top: 30px;
 	-webkit-box-shadow: 2px 15px 75px 6px #ECECEC;
 	box-shadow: 2px 15px 75px 6px #ECECEC;
+	border-radius: 8px;
 }
 
 .room-item .room-pic-item.owl-carousel .owl-nav button[type=button] {

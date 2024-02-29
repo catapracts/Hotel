@@ -30,7 +30,7 @@ public class MemberController
 	@GetMapping("/signup")
 	public String signup(MemberCreateForm memberCreateForm)
 	{
-		return "signup_form";
+		return "signUp";
 	}
 	
 	//회원 가입 정보 전송
@@ -44,7 +44,7 @@ public class MemberController
 		//유효성 체크에 오류가 발생 되었을때 signup_form.html 에 그대로 머물면서 오류 코드를 출력
 		if (bindingResult.hasErrors() ) 
 		{
-			return "signup_form"; 
+			return "signUp"; 
 		}
 		
 		// password1, password2 필드의 값이 같은지 확인 후 다르면
@@ -56,7 +56,7 @@ public class MemberController
 			("password2", "passwordInCorrect", 
 					"두개의 패스워드가 일치하지 않습니다");
 			
-			return "signup_form";
+			return "signUp";
 		}
 		
 		//유효성 검증을 통과 하면 DB에 저장 
@@ -76,37 +76,32 @@ public class MemberController
 		catch(DataIntegrityViolationException e)
 		{
 			bindingResult.reject("siginupFailed", "이미 등록된 사용자 입니다.");
-			return "signup_form";
+			return "signUp";
 		}
 		
 		//그외의 예외(오류) 가 발생되면 작동
 		catch(Exception e)
 		{
 			bindingResult.reject("siginupFailed", "알수 없는 오류 발생 ");
-			return "signup_form";
+			return "signUp";
 		}
 		
 		return "redirect:/";
 		
 	}
 	
-	@GetMapping("/login")
-	public String login() 
+	@GetMapping("/Login")
+	public String Login() 
 	{
-		return "login_form";
+		return "Login";
 	}
 	
-	@GetMapping("/logout")
-	public String logout() 
+	@GetMapping("/Logout")
+	public String Logout() 
 	{
 		return "redirect:/";
 	}
 	
-	@GetMapping("/admin")
-	public String admin()
-	{
-		return "admin_form";
-	}
 
 
 	//http://localhost:9000/memberList
