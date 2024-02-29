@@ -1,7 +1,6 @@
 package com.hotel.Hotel.RoomReservation;
 
 import java.security.Principal;
-
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -97,6 +96,10 @@ public class RoomReservationController
 	)
 	{
 		System.out.println("###현재 로그온한 계정 : " + principal.getName());
+		System.out.println("RoomReservationController 시작");
+		//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		//LocalDateTime dateTime = LocalDateTime.parse(str, formatter);
+		
 		
 		//유효성 체크에 오류가 발생 되었을때 signup_form.html 에 그대로 머물면서 오류 코드를 출력
 		if (bindingResult.hasErrors() ) 
@@ -105,8 +108,7 @@ public class RoomReservationController
 		}
 		
 		Member member = memberService.getMember(principal.getName());
-
-		
+		System.out.println("RoomReservationController에서 방 생성 메소드 호출");
 		//유효성 검증을 통과 하면 DB에 저장 
 		try
 		{
@@ -118,6 +120,8 @@ public class RoomReservationController
 					roomReservationCreateForm.getEdate(),
 					roomReservationCreateForm.getCnt()
 			);
+			System.out.println(roomReservationCreateForm.getSdate().getClass());
+			System.out.println(roomReservationCreateForm.getEdate().getClass());
 		}
 		
 		// DB컬럼의 무결성 제약조건 위반시 작동됨
@@ -131,7 +135,7 @@ public class RoomReservationController
 		//그외의 예외(오류) 가 발생되면 작동
 		catch(Exception e)
 		{
-			bindingResult.reject("siginupFailed", "알수 없는 오류 발생 ");
+			bindingResult.reject("duplicate", "날짜 중복 or 방 중복 선택 발생, 다시 선택하세요.");
 			return "roomReservation_Form";
 		}
 		
@@ -142,16 +146,17 @@ public class RoomReservationController
 	@GetMapping("/updateRoomReservation/{seq}")
 	public String updateRoomReservation
 	(
-			RoomReservationForm roomReservationorm,
+			RoomReservationForm roomReservationform,
 			@PathVariable("seq") int seq, 
 			Principal principal	
 	)
 	{
+		System.out.println("RoomReservationController에서 방 정보 업데이트 메소드 호출");
 		RoomReservation roomReservation = roomReservationService.getRoomReservation(seq);
-		roomReservationorm.setRid(roomReservation.getRroom().getRid());
-		roomReservationorm.setSdate(roomReservation.getSdate());
-		roomReservationorm.setEdate(roomReservation.getEdate());
-		roomReservationorm.setCnt(roomReservation.getCnt());
+		roomReservationform.setRid(roomReservation.getRroom().getRid());
+		roomReservationform.setSdate(roomReservation.getSdate());
+		roomReservationform.setEdate(roomReservation.getEdate());
+		roomReservationform.setCnt(roomReservation.getCnt());
 		
 		return "roomReservation_Form2";
 	}
@@ -176,6 +181,7 @@ public class RoomReservationController
 		
 		RoomReservation roomReservation = roomReservationService.getRoomReservation(seq);
 		System.out.println(roomReservation.getSeq());
+		System.out.println("RoomReservationController에서 방 정보 업데이트 메소드 호출");
 		roomReservationService.updateRoomReservation
 		(
 				roomReservation, 

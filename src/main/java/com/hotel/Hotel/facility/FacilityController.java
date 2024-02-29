@@ -49,7 +49,9 @@ public class FacilityController
 			facilityService.create
 			(
 				facilityCreateForm.getFname(),
-				facilityCreateForm.getFtype()
+				facilityCreateForm.getFtype(),
+				facilityCreateForm.getFprice()
+				
 			);
 		}
 		
@@ -169,6 +171,7 @@ public class FacilityController
 		// q 에 저장된 subject , content 필드의 값을 questionForm에 넣어서 클라이언트로 전송 
 		facilityCreateForm.setFname(f.getFname());
 		facilityCreateForm.setFtype(f.getFtype());
+		facilityCreateForm.setFprice(f.getFprice());
 			
 		return "facility_form";
 	}
@@ -198,7 +201,8 @@ public class FacilityController
 		(
 				fid,
 				facilityCreateForm.getFname(),
-				facilityCreateForm.getFtype()
+				facilityCreateForm.getFtype(),
+				facilityCreateForm.getFprice()
 		) ;
 		
 		// 수정 이후에 이동할 페이지 
