@@ -1,177 +1,8 @@
-<!DOCTYPE html>
-    <head>
-        <title>Crown hotel</title>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+<html layout:decorate="~{layout2}">
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="index3.css" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i"
-            rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-            rel="stylesheet"
-        />
-
-        <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
-
-        <link rel="stylesheet" href="css/owl.carousel.min.css" />
-        <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-        <link rel="stylesheet" href="css/magnific-popup.css" />
-
-        <link rel="stylesheet" href="css/aos.css" />
-
-        <link rel="stylesheet" href="css/ionicons.min.css" />
-
-        <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-        <link rel="stylesheet" href="css/jquery.timepicker.css" />
-
-        <link rel="stylesheet" href="css/flaticon.css" />
-        <link rel="stylesheet" href="css/icomoon.css" />
-        <link rel="stylesheet" href="css/style.css" />
-		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
-
-			<style>
-	@font-face {
-    font-family: 'SDSamliphopangche_Outline';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body 
-{
-	font-family: 'SDSamliphopangche_Outline';
-}	  .p111{
-	font-family: 'SDSamliphopangche_Outline';
-            }
-
-.cinzel
-	{
-  font-family: "Cinzel", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
-			</style>
-
-
-    </head>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
-		th:fragment="navbarFragment">
-			<div class="container">
-				<a class="navbar-brand" href="index.html"><img width="30px" src="/img/logo(footerlogo).png" />
-					&nbsp;Crown hotel</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-					aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="oi oi-menu"></span> Menu
-				</button>
-				<div class="col-xl-2 col-lg-2"></div>
-				<div class="collapse navbar-collapse" id="ftco-nav">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a href="adminindex.html" class="nav-link">관리자</a>
-						</li>
-						<li class="nav-item">
-							<a href=".html" class="nav-link">예약</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" 
-							id="navbarDropdown" role="button"
-								data-toggle="dropdown" aria-haspopup="true" 
-								aria-expanded="false"
-								>
-								방 <i class="ti-angle-down"></i>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="room_list.html"> 방 소개</a>
-
-								<a class="dropdown-item" href="room_classic.html">Classic</a>
-								<a class="dropdown-item" href="room_deluxe.html">Deluxe</a>
-								<a class="dropdown-item" href="room_family.html">Family</a>
-								<a class="dropdown-item" href="room_superior.html">Superior</a>
-								<a class="dropdown-item" href="room_suite.html">Suite</a>
-								<a class="dropdown-item" href="room_luxury.html">Luxury</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								시설 <i class="ti-angle-down"></i>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="facility_list.html">시설소개</a>
-
-								<a class="dropdown-item" href="facility_pool.html">수영장</a>
-								<a class="dropdown-item" href="facility_restaurant.html">식당</a>
-								<a class="dropdown-item" href="facility_golf.html">골프장</a>
-
-								<a class="dropdown-item" href="facilityhelth.html">헬스장</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								고객센터 <i class="ti-angle-down"></i>
-							</a>
-						
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								마이 페이지<i class="ti-angle-down"></i>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="index.html">메인 페이지</a>
-								<a class="dropdown-item" href="myBookList.html">
-									예약 리스트 페이지</a>
-								<a class="dropdown-item" href="getMyRoomBook.html">
-									예약 자세히보기</a>
-								<a class="dropdown-item" href="getRoomStatus.html">
-									현재 객실 상황</a>
-								<a class="dropdown-item" href="getFacilityStaus.html">
-									현재 시설 상황</a>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a href="login.html" class="nav-link">로그인</a>
-						</li>
-
-
-						<li class="nav-item">
-							<a href="signUp.html" class="nav-link">로그아웃</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-    <body>
-        <div class="info">
-            <img width="100px" src="/img/logo.png" />
-        </div>
-
-     
-		<!-- END nav -->
-
-<main>
-	<th:block layout:fragment="content">
+<th:block layout:fragment="content">
+	<body>
+		<main>
 		<section class="home-slider owl-carousel">
 			<div class="slider-item" style="background-image: url(images/view\(1\).jpg)">
 				<div class="overlay"></div>
@@ -238,7 +69,6 @@ body
 
 		<br /><br />
 
-
 		<section class="ftco-booking">
 			<div class="container">
 				<div class="row">
@@ -272,11 +102,11 @@ body
 														<span class="ion-ios-arrow-down"></span>
 													</div>
 													<select name="" id="" class="form-control">
-														<option value="">스위트</option>
-														<option value="">패밀리룸</option>
-														<option value="">디럭스룸</option>
 														<option value="">클래식룸</option>
+														<option value="">디럭스룸</option>
+														<option value="">패밀리룸</option>
 														<option value="">슈페리어룸</option>
+														<option value="">스위트</option>
 														<option value="">럭셔리룸</option>
 													</select>
 												</div>
@@ -382,8 +212,8 @@ body
 								</div>
 							</div>
 							<div class="media-body p-2 mt-2">
-								<h3 class="heading mb-3">24/7 프론트 데스크</h3>
-								<p style="color: black;">
+								<h3 class="heading mb-3">헬스장</h3>
+								<p>
 									저희는 최고의 서비스를 위해 24시간 프론트
 									직원이 상주해 있습니다.
 								</p>
@@ -398,8 +228,8 @@ body
 								</div>
 							</div>
 							<div class="media-body p-2 mt-2">
-								<h3 class="heading mb-3">레스토랑 바</h3>
-								<p style="color: black;">
+								<h3 class="heading mb-3">레스토랑</h3>
+								<p >
 									최고의 쉐프들이 직접 조리하고, 신선한 재료를
 									이용하는 레스토랑.
 								</p>
@@ -414,10 +244,9 @@ body
 								</div>
 							</div>
 							<div class="media-body p-2 mt-2">
-								<h3 class="heading mb-3">전송 서비스</h3>
-								<p style="color: black;">
-									투숙객님들에 한하여 공항까지 픽업 서비스를
-									진행하고 있습니다.
+								<h3 class="heading mb-3">골프장</h3>
+								<p >
+									투숙객님들에 한하여 최상의 골프장을 운영하고 있습니다
 								</p>
 							</div>
 						</div>
@@ -430,8 +259,8 @@ body
 								</div>
 							</div>
 							<div class="media-body p-2 mt-2">
-								<h3 class="heading mb-3">스파 스위트</h3>
-								<p style="color: black;">
+								<h3 class="heading mb-3">수영장</h3>
+								<p >
 									3000명 수용이 가능한 수영장과 청결을 유지하여
 									이용객님들의 편의를 제공합니다.
 								</p>
@@ -441,8 +270,6 @@ body
 				</div>
 			</div>
 		</section>
-
-		
 
 		<section class="ftco-section ftco-counter img" id="section-counter"
 			style="background-image: url(images/bg_1.jpg)">
@@ -732,104 +559,11 @@ body
 				</div>
 			</div>
 		</section>
-	</th:block>
-	<footer class="ftco-footer ftco-bg-dark ftco-section">
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">크라운 호텔</h2>
-						<p>
-							당신이 찾던 호텔 <br>
-                			최고의 서비스와 최고의 대우로 <br>
-               			 	여러분들의 편의와 만족을 드리는 <br>
-               		 		CROWN HOTEL.
-						</p>
-						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-							<li class="ftco-animate">
-								<a href="#"><span class="icon-twitter"></span></a>
-							</li>
-							<li class="ftco-animate">
-								<a href="#"><span class="icon-facebook"></span></a>
-							</li>
-							<li class="ftco-animate">
-								<a href="#"><span class="icon-instagram"></span></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4 ml-md-5">
-						<h2 class="ftco-heading-2">유용한 링크</h2>
-						<ul class="list-unstyled">
-							<li>
-								<a href="#" class="py-2 d-block">블로그</a>
-							</li>
-							<li>
-								<a href="#" class="py-2 d-block">객실</a>
-							</li>
-							<li>
-								<a href="#" class="py-2 d-block">편의 시설</a>
-							</li>
-							<li>
-								<a href="#" class="py-2 d-block">기프트 카드</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">개인정보</h2>
-						<ul class="list-unstyled">
-							<li>
-								<a href="#" class="py-2 d-block">경력</a>
-							</li>
-							<li>
-								<a href="#" class="py-2 d-block">회사 소개</a>
-							</li>
-							<li>
-								<a href="#" class="py-2 d-block">문의하기</a>
-							</li>
-							<li>
-								<a href="#" class="py-2 d-block">서비스</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">질문이 있으신가요?</h2>
-						<div class="block-23 mb-3">
-							<ul>
-								<li>
-									<span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span>
-								</li>
-								<li>
-									<a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a>
-								</li>
-								<li>
-									<a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-center">
-				 
-				</div>
-			</div>
-		</div>
-	</footer>
-	
-	<!-- 로더 -->
-	<div id="ftco-loader" class="show fullscreen">
-		<svg class="circular" width="48px" height="48px">
-			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
-		</svg>
-	</div>
+		</main>
+	</body>	
+</th:block>
+
+<th:block layout:fragment="script">
 	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -849,7 +583,6 @@ body
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
 	
-</body>
-
+</th:block>
 
 </html>

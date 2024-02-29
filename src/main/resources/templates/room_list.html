@@ -1,436 +1,205 @@
-<!DOCTYPE html>
-    <head>
-        <title>Crown hotel</title>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <link rel="stylesheet" href="index3.less" />
-        <link rel="stylesheet" href="index3.css" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i"
-            rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-            rel="stylesheet"
-        />
+<html layout:decorate="~{layout2}">
 
-        <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
+<th:block layout:fragment="content">
 
-        <link rel="stylesheet" href="css/owl.carousel.min.css" />
-        <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-        <link rel="stylesheet" href="css/magnific-popup.css" />
+	<!-- END nav -->
 
-        <link rel="stylesheet" href="css/aos.css" />
+	<br>
+	<br>
+	<br>
+	<br>
 
-        <link rel="stylesheet" href="css/ionicons.min.css" />
 
-        <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-        <link rel="stylesheet" href="css/jquery.timepicker.css" />
+	<section class="ftco-section bg-light">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h2 class="mb-4">우리의 객실</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+					<div class="room">
+						<a th:href="@{/room_classic}"
+							class="img d-flex justify-content-center align-items-center"
+							style="background-image: url(images/room-1.jpg)">
+							<div
+								class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+						</a>
+						<div class="text p-3 text-center">
+							<h3 class="mb-3">
+								<a th:href="@{/room_classic}">Classic</a>
+							</h3>
+							&nbsp;
+							<p>
+								<span class="price mr-2">$ &nbsp;1,200</span> <span class="per">하룻밤당</span>
+							</p>
+							<hr />
+							<p class="pt-1">
+								<a th:href="@{/room_classic}" class="btn-custom">객실 정보 보기 <span
+									class="icon-long-arrow-right"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+					<div class="room">
+						<a th:href="@{/room_deluxe}"
+							class="img d-flex justify-content-center align-items-center"
+							style="background-image: url(images/room-2.jpg)">
+							<div
+								class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+						</a>
+						<div class="text p-3 text-center">
+							<h3 class="mb-3">
+								<a th:href="@{/room_deluxe}">Deluxe </a>
+							</h3>
+							&nbsp;
+							<p>
+								<span class="price mr-2">$ &nbsp;2,000</span> <span class="per">하룻밤당</span>
+							</p>
+							<hr />
+							<p class="pt-1">
+								<a th:href="@{/room_deluxe}" class="btn-custom">객실 정보 보기 <span
+									class="icon-long-arrow-right"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+					<div class="room">
+						<a th:href="@{/room_family}"
+							class="img d-flex justify-content-center align-items-center"
+							style="background-image: url(images/room-3.jpg)">
+							<div
+								class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+						</a>
+						<div class="text p-3 text-center">
+							<h3 class="mb-3">
+								<a th:href="@{/room_family}">Family</a>
+							</h3>
+							&nbsp;
+							<p>
+								<span class="price mr-2">$ &nbsp;15,000</span> <span class="per">하룻밤당</span>
+							</p>
+							<hr />
+							<p class="pt-1">
+								<a th:href="@{/room_family}" class="btn-custom">객실 정보 보기 <span
+									class="icon-long-arrow-right"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+					<div class="room">
+						<a th:href="@{/room_superior}"
+							class="img d-flex justify-content-center align-items-center"
+							style="background-image: url(images/room-4.jpg)">
+							<div
+								class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+						</a>
+						<div class="text p-3 text-center">
+							<h3 class="mb-3">
+								<a th:href="@{/room_superior}">Superior</a>
+							</h3>
+							&nbsp;
+							<p>
+								<span class="price mr-2">$ &nbsp;13,000</span> <span class="per">하룻밤당</span>
+							</p>
+							<hr />
+							<p class="pt-1">
+								<a th:href="@{/room_superior}" class="btn-custom">객실 정보 보기 <span
+									class="icon-long-arrow-right"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+					<div class="room">
+						<a th:href="@{/room_suite}"
+							class="img d-flex justify-content-center align-items-center"
+							style="background-image: url(images/room-5.jpg)">
+							<div
+								class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+						</a>
+						<div class="text p-3 text-center">
+							<h3 class="mb-3">
+								<a th:href="@{/room_suite}">Suite</a>
+							</h3>
+							&nbsp;
+							<p>
+								<span class="price mr-2">$ &nbsp;30,000</span> <span class="per">하룻밤당</span>
+							</p>
+							<hr />
+							<p class="pt-1">
+								<a th:href="@{/room_suite}" class="btn-custom">객실 정보 보기 <span
+									class="icon-long-arrow-right"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+					<div class="room">
+						<a th:href="@{/room_luxury}"
+							class="img d-flex justify-content-center align-items-center"
+							style="background-image: url(images/room-6.jpg)">
+							<div
+								class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+						</a>
+						<div class="text p-3 text-center">
+							<h3 class="mb-3">
+								<a th:href="@{/room_luxury}">Luxury</a>
+							</h3>
+							&nbsp;
+							<p>
+								<span class="price mr-2">$ &nbsp;50,000</span> <span class="per">하룻밤당</span>
+							</p>
+							<hr />
+							<p class="pt-1">
+								<a th:href="@{/room_luxury}" class="btn-custom">객실 정보 보기 <span
+									class="icon-long-arrow-right"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</th:block>
 
-        <link rel="stylesheet" href="css/flaticon.css" />
-        <link rel="stylesheet" href="css/icomoon.css" />
-        <link rel="stylesheet" href="css/style.css" />
-    
-    	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
-        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+<th:block layout:fragment="script">
 
-        <style>
-    @font-face {
-      font-family: 'SDSamliphopangche_Outline';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-    
-    body {
-    font-family: 'SDSamliphopangche_Outline';
-    }	  .p111{
-    font-family: 'SDSamliphopangche_Outline';
-              }
-        </style>
-      </head>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
-      th:fragment="navbarFragment">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><img width="30px" src="/img/logo(footerlogo).png" />
-            &nbsp;Crown hotel</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-          </button>
-          <div class="col-xl-2 col-lg-2"></div>
-          <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a href="adminindex.html" class="nav-link">관리자</a>
-              </li>
-              <li class="nav-item">
-                <a href=".html" class="nav-link">예약</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" 
-                id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" 
-                  aria-expanded="false"
-                  >
-                  방 <i class="ti-angle-down"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="room_list.html"> 방 소개</a>
-    
-                  <a class="dropdown-item" href="room_classic.html">Classic</a>
-                  <a class="dropdown-item" href="room_deluxe.html">Deluxe</a>
-                  <a class="dropdown-item" href="room_family.html">Family</a>
-                  <a class="dropdown-item" href="room_superior.html">Superior</a>
-                  <a class="dropdown-item" href="room_suite.html">Suite</a>
-                  <a class="dropdown-item" href="room_luxury.html">Luxury</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  시설 <i class="ti-angle-down"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="facility_list.html">시설소개</a>
-    
-                  <a class="dropdown-item" href="facility_pool.html">수영장</a>
-                  <a class="dropdown-item" href="facility_restaurant.html">식당</a>
-                  <a class="dropdown-item" href="facility_golf.html">골프장</a>
-    
-                  <a class="dropdown-item" href="facilityhelth.html">헬스장</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  고객센터 <i class="ti-angle-down"></i>
-                </a>
-              
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  마이 페이지<i class="ti-angle-down"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="index.html">메인 페이지</a>
-                  <a class="dropdown-item" href="myBookList.html">
-                    예약 리스트 페이지</a>
-                  <a class="dropdown-item" href="getMyRoomBook.html">
-                    예약 자세히보기</a>
-                  <a class="dropdown-item" href="getROomStatus.html">
-                    현재 객실 상황</a>
-                  <a class="dropdown-item" href="getFacilityStaus.html">
-                    현재 시설 상황</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a href="login.html" class="nav-link">로그인</a>
-              </li>
-    
-    
-              <li class="nav-item">
-                <a href="signUp.html" class="nav-link">로그아웃</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-      <body>
-        
-          <div class="info">
-              <img width="100px" src="/img/logo.png" />
-          </div>
-    
-		<!-- END nav -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jquery.timepicker.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="js/google-map.js"></script>
+	<script src="js/main.js"></script>
 
-        <br><br><br><br>
-        
-
-<section class="ftco-section bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4">우리의 객실</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms.html" class="img d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/room-1.jpg)">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3">
-                            <a href="room_classic.html">Classic</a>
-                        </h3> &nbsp;
-                        <p>
-                            <span class="price mr-2">$  &nbsp;1,200</span>
-                            <span class="per">하룻밤당</span>
-                        </p>
-                        <hr />
-                        <p class="pt-1">
-                            <a href="room_classic.html" class="btn-custom">객실 정보 보기 <span
-                                    class="icon-long-arrow-right"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms.html" class="img d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/room-2.jpg)">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3">
-                            <a href="room_deluxe.html">Deluxe </a>
-                        </h3> &nbsp;
-                        <p>
-                            <span class="price mr-2">$  &nbsp;2,000</span>
-                            <span class="per">하룻밤당</span>
-                        </p>
-                        <hr />
-                        <p class="pt-1">
-                            <a href="room_deluxe.html" class="btn-custom">객실 정보 보기 <span
-                                    class="icon-long-arrow-right"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms.html" class="img d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/room-3.jpg)">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3">
-                            <a href="room_family.html">Family</a>
-                        </h3> &nbsp;
-                        <p>
-                            <span class="price mr-2">$  &nbsp;15,000</span>
-                            <span class="per">하룻밤당</span>
-                        </p>
-                        <hr />
-                        <p class="pt-1">
-                            <a href="room_family.html" class="btn-custom">객실 정보 보기 <span
-                                    class="icon-long-arrow-right"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms.html" class="img d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/room-4.jpg)">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3">
-                            <a href="roomclasic.html">Superior</a>
-                        </h3> &nbsp;
-                        <p>
-                            <span class="price mr-2">$  &nbsp;13,000</span>
-                            <span class="per">하룻밤당</span>
-                        </p>
-                        <hr />
-                        <p class="pt-1">
-                            <a href="room_superior.html" class="btn-custom">객실 정보 보기 <span
-                                    class="icon-long-arrow-right"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms.html" class="img d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/room-5.jpg)">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3">
-                            <a href="rooms.html">Suite</a>
-                        </h3> &nbsp;
-                        <p>
-                            <span class="price mr-2">$  &nbsp;30,000</span>
-                            <span class="per">하룻밤당</span>
-                        </p>
-                        <hr />
-                        <p class="pt-1">
-                            <a href="room_suite.html" class="btn-custom">객실 정보 보기 <span
-                                    class="icon-long-arrow-right"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms.html" class="img d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/room-6.jpg)">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3">
-                            <a href="rooms.html">Luxury</a>
-                        </h3>  &nbsp;
-                        <p>
-                            <span class="price mr-2">$  &nbsp;50,000</span>
-                            <span class="per">하룻밤당</span>
-                        </p>
-                        <hr />
-                        <p class="pt-1">
-                            <a href="room_luxury.html" class="btn-custom">객실 정보 보기 <span
-                                    class="icon-long-arrow-right"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer class="ftco-footer ftco-bg-dark ftco-section">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">디럭스 호텔</h2>
-                    <p>
-                        아주 먼 곳, 단어 산맥 뒤, 나라 Vokalia와 Consonantia에서
-                        멀리 떨어져, 눈먼 텍스트들이 살고 있습니다.
-                    </p>
-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                        <li class="ftco-animate">
-                            <a href="#"><span class="icon-twitter"></span></a>
-                        </li>
-                        <li class="ftco-animate">
-                            <a href="#"><span class="icon-facebook"></span></a>
-                        </li>
-                        <li class="ftco-animate">
-                            <a href="#"><span class="icon-instagram"></span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4 ml-md-5">
-                    <h2 class="ftco-heading-2">유용한 링크</h2>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="py-2 d-block">블로그</a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 d-block">객실</a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 d-block">편의 시설</a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 d-block">기프트 카드</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">개인정보</h2>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="py-2 d-block">경력</a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 d-block">회사 소개</a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 d-block">문의하기</a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 d-block">서비스</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">질문이 있으신가요?</h2>
-                    <div class="block-23 mb-3">
-                        <ul>
-                            <li>
-                                <span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-             
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- 로더 -->
-<div id="ftco-loader" class="show fullscreen">
-    <svg class="circular" width="48px" height="48px">
-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
-    </svg>
-</div>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-migrate-3.0.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/aos.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.timepicker.min.js"></script>
-<script src="js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="js/google-map.js"></script>
-<script src="js/main.js"></script>
-
-</body>
-
+</th:block>
 
 </html>

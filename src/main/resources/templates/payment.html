@@ -1,488 +1,304 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <title>Crown hotel</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="index3.less" />
-    <link rel="stylesheet" href="index3.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
+<html layout:decorate="~{layout2}">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
+<th:block layout:fragment="content">
+	<link rel="stylesheet" href="index3.less" />
+	<link rel="stylesheet" href="index3.css" />
+	<link
+		href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
+		rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i"
+		rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+		rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+	<link rel="stylesheet" href="css/animate.css" />
 
-    <link rel="stylesheet" href="css/aos.css" />
+	<link rel="stylesheet" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="css/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
 
-    <link rel="stylesheet" href="css/ionicons.min.css" />
+	<link rel="stylesheet" href="css/aos.css" />
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-    <link rel="stylesheet" href="css/jquery.timepicker.css" />
-    <link rel="stylesheet" href="css/payment.css" />
+	<link rel="stylesheet" href="css/ionicons.min.css" />
 
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+	<link rel="stylesheet" href="css/jquery.timepicker.css" />
+	<link rel="stylesheet" href="css/payment.css" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+	<link rel="stylesheet" href="css/flaticon.css" />
+	<link rel="stylesheet" href="css/icomoon.css" />
+	<link rel="stylesheet" href="css/style.css" />
 
-    <style>
+	<link rel="shortcut icon" type="image/x-icon"
+		href="/images/favicon.png">
+
+	<style>
 @font-face {
-  font-family: 'SDSamliphopangche_Outline';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'SDSamliphopangche_Outline';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
-font-family: 'SDSamliphopangche_Outline';
-}	  .p111{
-font-family: 'SDSamliphopangche_Outline';
-          }
-    </style>
-  </head>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
-  th:fragment="navbarFragment">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><img width="30px" src="/img/logo(footerlogo).png" />
-        &nbsp;Crown hotel</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
-      </button>
-      <div class="col-xl-2 col-lg-2"></div>
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="adminindex.html" class="nav-link">관리자</a>
-          </li>
-          <li class="nav-item">
-            <a href=".html" class="nav-link">예약</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" 
-            id="navbarDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" 
-              aria-expanded="false"
-              >
-              방 <i class="ti-angle-down"></i>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="room_list.html"> 방 소개</a>
+	font-family: 'SDSamliphopangche_Outline';
+}
 
-              <a class="dropdown-item" href="room_classic.html">Classic</a>
-              <a class="dropdown-item" href="room_deluxe.html">Deluxe</a>
-              <a class="dropdown-item" href="room_family.html">Family</a>
-              <a class="dropdown-item" href="room_superior.html">Superior</a>
-              <a class="dropdown-item" href="room_suite.html">Suite</a>
-              <a class="dropdown-item" href="room_luxury.html">Luxury</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              시설 <i class="ti-angle-down"></i>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="facility_list.html">시설소개</a>
+.p111 {
+	font-family: 'SDSamliphopangche_Outline';
+}
 
-              <a class="dropdown-item" href="facility_pool.html">수영장</a>
-              <a class="dropdown-item" href="facility_restaurant.html">식당</a>
-              <a class="dropdown-item" href="facility_golf.html">골프장</a>
+h2 {
+	font-weight: border;
+}
 
-              <a class="dropdown-item" href="facilityhelth.html">헬스장</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              고객센터 <i class="ti-angle-down"></i>
-            </a>
-          
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              마이 페이지<i class="ti-angle-down"></i>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="index.html">메인 페이지</a>
-              <a class="dropdown-item" href="myBookList.html">
-                예약 리스트 페이지</a>
-              <a class="dropdown-item" href="getMyRoomBook.html">
-                예약 자세히보기</a>
-              <a class="dropdown-item" href="getROomStatus.html">
-                현재 객실 상황</a>
-              <a class="dropdown-item" href="getFacilityStaus.html">
-                현재 시설 상황</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="login.html" class="nav-link">로그인</a>
-          </li>
+.hr1 {
+	border: 0;
+	height: 2px;
+	background: #d3d3d3;
+}
+
+.grey {
+	color: #727272;
+}
+
+#strong {
+	font-weight: 900;
+}
+
+table {
+	width: 100%;
+	border-top: 1px solid #d3d3d3;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: #d3d3d3;
+	border-top: 3px solid #727272;
+}
+
+th, td {
+	border-bottom: 1px solid #d3d3d3;
+	padding: 10px;
+}
+
+.greylist {
+	width: 50px;
+	height: 30px;
+	font-weight: 900;
+	color: white;
+	text-align: center;
+	background: grey;
+	border: solid 2px white;
+	border-radius: 5px;
+}
+
+.gradient {
+	width: 80px;
+	height: 30px;
+	font-weight: 900;
+	color: white;
+	text-align: center;
+	background: linear-gradient(to bottom, grey, black);
+	border: solid 2px white;
+	border-radius: 5px;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+a {
+	color: black;
+	text-decoration-line: none;
+}
+</style>
+
+	<!-- END nav -->
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<main>
+
+		<div class="container">
+			<div class="card">
+				<div class="payment-details">
+					<h3>결제 세부 정보</h3>
+					<p>결제 세부 정보를 제공하여 결제를 완료 하십시오.</p>
+				</div>
+				<div class="input-text">
+					<input type="text" placeholder="luke@skywalker.com" /> <span>이메일</span>
+				</div>
+				<div class="input-text">
+					<input type="text" placeholder="0000 0000 0000 0000" data-slots="0"
+						data-accept="\d" /> <span>카드 번호</span>
+				</div>
+				<div class="input-text-cvv">
+					<input type="text" placeholder="mm/yyyy" data-slots="my" />
+					<!--<span>Card Details</span>-->
+				</div>
+				<div class="input-text-cvv cvv">
+					<input type="text" placeholder="000" data-slots="0"
+						data-accept="\d" size="3" />
+					<!--<span>Card Details</span>-->
+				</div>
+				<div class="input-text">
+					<input type="text" placeholder="Username" /> <span>카드 소지자
+						성함</span>
+				</div>
+				<div class="billing">
+					<span>청구서 발송지</span> <select>
+						<option>나라 선택</option>
+						<option selected>대한민국</option>
+						<option>미국</option>
+						<option>인도</option>
+						<option>영국</option>
+
+					</select>
+					<div class="zip-state">
+						<div class="zip">
+							<input type="text" placeholder="집" />
+						</div>
+						<div class="state">
+							<select>
+								<option>도시 선택</option>
+								<option selected>서울</option>
+								<option>뉴욕</option>
+								<option>뉴 델리</option>
+								<option>런던</option>
+
+								<option>모스크바</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="input-text">
+					<input type="text" placeholder="GB0124589" /> <span>부가세 번호</span>
+				</div>
+				<div class="input-text">
+					<input type="text" placeholder="BLACKWEDNESDAY" /> <span>할인
+						코드</span>
+				</div>
+				<div class="summary">
+					<div class="text-data">
+						<p style="color: black;">소계</p>
+						<p style="color: black;">할인</p>
+						<p style="color: black;">부가가치세(20%)</p>
+						<h5>총계</h5>
+					</div>
+					<div class="numerical-data">
+						<p style="color: black;">$19.00</p>
+						<p style="color: black;">$5.00</p>
+						<p style="color: black;">$2.80</p>
+						<h5>$16.80</h5>
+					</div>
+				</div>
+				<div class="pay">
+					<button>결제하기</button>
+				</div>
+				<div class="secure">
+					<i class="fa fa-lock"></i>
+					<p>결제는 보안 및 암호화 됩니다.</p>
+				</div>
+				<div class="last">
+					<p style="color: black;">P</p>
+					<a href="#"> 용어 </a> <a href="#"> 개인정보 </a>
 
 
-          <li class="nav-item">
-            <a href="signUp.html" class="nav-link">로그아웃</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-  <body>
-    
-      <div class="info">
-          <img width="100px" src="/img/logo.png" />
-      </div>
+				</div>
 
-    <!-- END nav -->
-    <br /><br /><br /><br /><br />
-    <main>
-    
-      <div class="container">
-        <div class="card">
-          <div class="payment-details">
-            <h3>결제 세부 정보</h3>
-            <p>결제 세부 정보를 제공하여 결제를 완료 하십시오.</p>
-          </div>
-          <div class="input-text">
-            <input type="text" placeholder="luke@skywalker.com" />
-            <span>이메일</span>
-          </div>
-          <div class="input-text">
-            <input
-              type="text"
-              placeholder="0000 0000 0000 0000"
-              data-slots="0"
-              data-accept="\d"
-            />
-            <span>카드 번호</span>
-          </div>
-          <div class="input-text-cvv">
-            <input type="text" placeholder="mm/yyyy" data-slots="my" />
-            <!--<span>Card Details</span>-->
-          </div>
-          <div class="input-text-cvv cvv">
-            <input
-              type="text"
-              placeholder="000"
-              data-slots="0"
-              data-accept="\d"
-              size="3"
-            />
-            <!--<span>Card Details</span>-->
-          </div>
-          <div class="input-text">
-            <input type="text" placeholder="Username" />
-            <span>카드 소지자 성함</span>
-          </div>
-          <div class="billing">
-            <span>청구서 발송지</span>
-            <select>
-              <option>나라 선택</option>
-              <option selected>대한민국</option>
-              <option>미국</option>
-              <option>인도</option>
-              <option>영국</option>
-          
-            </select>
-            <div class="zip-state">
-              <div class="zip">
-                <input type="text" placeholder="집" />
-              </div>
-              <div class="state">
-                <select>
-                  <option>도시 선택</option>
-                  <option selected>서울</option>
-                  <option>뉴욕</option>
-                  <option>뉴 델리</option>
-                  <option>런던</option>
-              
-                  <option>모스크바</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="input-text">
-            <input type="text" placeholder="GB0124589" />
-            <span>부가세 번호</span>
-          </div>
-          <div class="input-text">
-            <input type="text" placeholder="BLACKWEDNESDAY" />
-            <span>할인 코드</span>
-          </div>
-          <div class="summary">
-            <div class="text-data">
-              <p style="color: black;">소계</p>
-              <p style="color: black;">할인</p>
-              <p style="color: black;">부가가치세(20%)</p>
-              <h5>총계</h5>
-            </div>
-            <div class="numerical-data">
-              <p style="color: black;">$19.00</p>
-              <p style="color: black;">$5.00</p>
-              <p style="color: black;">$2.80</p>
-              <h5>$16.80</h5>
-            </div>
-          </div>
-          <div class="pay">
-            <button>결제하기</button>
-          </div>
-          <div class="secure">
-            <i class="fa fa-lock"></i>
-            <p>결제는 보안 및 암호화 됩니다.</p>
-          </div>
-          <div class="last">
-            <p style="color: black;">P</p>
-            <a href="#"> 용어 </a>
-            <a href="#"> 개인정보 </a>
-            
-        
-          </div>
+				<div class="container">
+					<body>
+						<h2>예약 리스트</h2>
 
-          <div class="container">
+						<hr class="hr1" noshade>
 
-          <style>
-            h2 { font-weight: border; }
-            .hr1 { border: 0;
-            height: 2px;
-            background:  #d3d3d3;}
-                .grey { 
-                 color: #727272;}
-                 #strong { font-weight: 900;}
-            
-                        table {
-                        width: 100%;
-                        border-top: 1px solid #d3d3d3;
-                        border-collapse: collapse;
-                        }
-                        th { background-color: #d3d3d3 ; 
-                        border-top: 3px solid #727272;
-                        }
-                        th, td {
-                        border-bottom: 1px solid #d3d3d3;
-                        padding: 10px;
-                        }
-            
-              .greylist {
-              width: 50px;
-              height: 30px;
-              font-weight: 900;
-              color: white;
-              text-align: center;
-              background: grey;
-              border: solid 2px white;
-              border-radius: 5px;
-              }
-              .gradient {
-              width: 80px;
-              height: 30px;
-              font-weight: 900;
-              color: white;
-              text-align: center;
-              background: linear-gradient( to bottom, grey, black );
-              border: solid 2px white;
-              border-radius: 5px;
-              }
-            
-                        .left {text-align: left;}
-                        .right {  float: right;}
-                        .center { text-align: center;}
-            
-            a {color:black;
-            text-decoration-line : none;}
-                </style>
-            </head>
-            
-            <body>
-                <h2> 예약 리스트 </h2>
-            
-            <hr class ="hr1" noshade> 
-            
-            <form>
-            <span> ▷ 총 1개의 예약건이  있습니다. </span>
-            <span class="right";> 
-                        <span class="grey"; id="strong";>SELECT</span>
-                <select>
-                <option value="제목"; name="제목"; >제목</option>
-                <option value="글쓴이";name="글쓴이";>글쓴이</option>
-                </select>
-            <input type="text";> <input type="button" name="검색" class="gradient" value="검색" >
-            </span>
-            </form>
-            
-            <br>
-            <table>
-                <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>글쓴이</th>
-                    <th>일시</th>
-                    <th>조회수</th>
-                </tr>
-                <tr>
-                    <td class="center">1</td>
-                    <td class="left">예약 입니다.</td>
-                    <td class="center">홍길동</td>
-                    <td class="center">2023-05-18</td>
-                    <td class="center">15</td>   
-                </tr>
-               
-            </table>
-            </br>
-            
-            <div class="center" >
-                <a href  = "https://www.naver.com/">◀ 이전</a> 
-                <a href  = "https://www.naver.com/">1</a>  
-                <a href  = "https://www.naver.com/">다음 ▶</a>
-            </div>
-            
-            <span class="right";>
-            <input type="button" value="목록" class="greylist";>
-            <input type="button" value="글쓰기"  class="gradient";>
-            </span>
-        </div>
-      </div>
-     </div>
-  
-    </main>
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">크라운 호텔</h2>
-              <p>
-                당신이 찾던 호텔 <br>
-                최고의 서비스와 최고의 대우로 <br>
-                여러분들의 편의와 만족을 드리는 <br>
-                CROWN HOTEL.
-              </p>
-              <ul
-                class="ftco-footer-social list-unstyled float-md-left float-lft mt-5"
-              >
-                <li class="ftco-animate">
-                  <a href="#"><span class="icon-twitter"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="icon-instagram"></span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">유용한 링크</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="py-2 d-block">블로그</a>
-                </li>
-                <li>
-                  <a href="#" class="py-2 d-block">객실</a>
-                </li>
-                <li>
-                  <a href="#" class="py-2 d-block">편의 시설</a>
-                </li>
-                <li>
-                  <a href="#" class="py-2 d-block">기프트 카드</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">개인정보</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="py-2 d-block">경력</a>
-                </li>
-                <li>
-                  <a href="#" class="py-2 d-block">회사 소개</a>
-                </li>
-                <li>
-                  <a href="#" class="py-2 d-block">문의하기</a>
-                </li>
-                <li>
-                  <a href="#" class="py-2 d-block">서비스</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">질문이 있으신가요?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li>
-                    <span class="icon icon-map-marker"></span
-                    ><span class="text"
-                      >203 Fake St. Mountain View, San Francisco, California,
-                      USA</span
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon icon-phone"></span
-                      ><span class="text">+2 392 3929 210</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon icon-envelope"></span
-                      ><span class="text">info@yourdomain.com</span></a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center"></div>
-        </div>
-      </div>
-    </footer>
-    <script src="js/card.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+						<form>
+							<span> ▷ 총 1개의 예약건이 있습니다. </span> <span class="right"> <span
+								class="grey" id="strong">SELECT</span> <select>
+									<option value="제목" name="제목">제목</option>
+									<option value="글쓴이" name="글쓴이">글쓴이</option>
+							</select> <input type="text"> <input type="button" name="검색"
+								class="gradient" value="검색">
+							</span>
+						</form>
+
+						<br>
+						<table>
+							<tr>
+								<th>번호</th>
+								<th>제목</th>
+								<th>글쓴이</th>
+								<th>일시</th>
+								<th>조회수</th>
+							</tr>
+							<tr>
+								<td class="center">1</td>
+								<td class="left">예약 입니다.</td>
+								<td class="center">홍길동</td>
+								<td class="center">2023-05-18</td>
+								<td class="center">15</td>
+							</tr>
+
+						</table>
+						</br>
+
+						<div class="center">
+							<a href="https://www.naver.com/">◀ 이전</a> <a
+								href="https://www.naver.com/">1</a> <a
+								href="https://www.naver.com/">다음 ▶</a>
+						</div>
+
+						<span class="right";> <input type="button" value="목록"
+							class="greylist";> <input type="button" value="글쓰기"
+							class="gradient";>
+						</span>
+					</body>
+				</div>
+			</div>
+		</div>
+	</main>
+</th:block>
+
+<th:block layout:fragment="script">
+
+	<script src="js/card.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jquery.timepicker.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="js/google-map.js"></script>
+	<script src="js/main.js"></script>
+
+</th:block>
+
 </html>
