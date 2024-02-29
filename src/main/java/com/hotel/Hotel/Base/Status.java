@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public enum Status 
 {
-	AVAILIABLE("Reservation_AVAILIABLE")
+	AVAILABLE("Reservation_AVAILABLE")
 	, DENIED("Reservation_DENIED") ; 
 
 	private String value;

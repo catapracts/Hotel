@@ -52,7 +52,9 @@ public class RoomController
 			roomService.create
 			(
 				roomCreateForm.getRname(),
-				roomCreateForm.getRtype()
+				roomCreateForm.getRtype(),
+				roomCreateForm.getRnum(),
+				roomCreateForm.getRprice()
 			);
 		}
 		
@@ -172,6 +174,8 @@ public class RoomController
 		// q 에 저장된 subject , content 필드의 값을 questionForm에 넣어서 클라이언트로 전송 
 		roomCreateForm.setRname(r.getRname());
 		roomCreateForm.setRtype(r.getRtype());
+		roomCreateForm.setRnum(r.getRnum());
+		roomCreateForm.setRprice(r.getRprice());
 			
 		return "room_form";
 	}
@@ -201,7 +205,9 @@ public class RoomController
 		(
 				rid,
 				roomCreateForm.getRname(),
-				roomCreateForm.getRtype()
+				roomCreateForm.getRtype(),
+				roomCreateForm.getRnum(),
+				roomCreateForm.getRprice()
 		) ;
 		
 		// 수정 이후에 이동할 페이지 

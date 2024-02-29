@@ -4,25 +4,32 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.hotel.Hotel.cancelfacility.CancelFacility;
 import com.hotel.Hotel.facility.Facility;
 import com.hotel.Hotel.member.Member;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @Table(name="FacilityReservation")
 @Getter @Setter @ToString
 @Entity
-public class FacilityReservation 
-{
+@NoArgsConstructor
+@AllArgsConstructor
+public class FacilityReservation {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int seq; //예약 번호, PK
@@ -39,4 +46,8 @@ public class FacilityReservation
 	private Date date; //예약일
 
 	private int cnt; //예약 인원 수
+	
+	@OneToOne(mappedBy = "fr", fetch = FetchType.LAZY)
+	private CancelFacility cancelFacility;
+
 }

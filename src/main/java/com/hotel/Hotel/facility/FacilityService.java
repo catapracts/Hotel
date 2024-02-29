@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import com.hotel.Hotel.Base.Status;
 import lombok.RequiredArgsConstructor;
 
 
@@ -20,11 +21,13 @@ public class FacilityService
 	public final FacilityRepository facilityRepository;
 	
 	//시설 생성
-	public Facility create(String fname, String ftype)
+	public Facility create(String fname, String ftype, int fprice)
 	{
 		Facility facility = new Facility();
 		facility.setFname(fname);
 		facility.setFtype(ftype);
+		facility.setFprice(fprice);
+		facility.setFstatus(Status.AVAILABLE); //시설 생성시 default = 예약 가능
 		return facilityRepository.save(facility);
 	}
 	
@@ -32,14 +35,32 @@ public class FacilityService
 	//시설 정보 수정
 	public Facility update
 	(
-			int fid, String fname, String ftype
+			int fid, String fname, String ftype, int fprice
 	)
 	{
 		Facility facility = facilityRepository.findById(fid).get();
 		facility.setFname(fname);
 		facility.setFtype(ftype);
+		facility.setFprice(fprice);
 		return facilityRepository.save(facility);
 	}
+	
+	
+	//시설 상태 변경 - 예약시 선택한 시설id를 가지고 와서 상태를 변경
+	public Facility fstatus(int fid)
+	{
+		Facility facility = facilityRepository.findById(fid).get();
+		facility.setFstatus(Status.DENIED);
+		return facilityRepository.save(facility); 
+	}
+	
+	//시설 상태 변경 - 예약시 선택한 시설id를 가지고 와서 상태를 변경
+	public Facility cstatus(int fid)
+	{
+		Facility facility = facilityRepository.findById(fid).get();
+		facility.setFstatus(Status.AVAILABLE);
+		return facilityRepository.save(facility); 
+	}	
 	
 	//시설 1개 출력
 	public Facility getFacility(int fid)
