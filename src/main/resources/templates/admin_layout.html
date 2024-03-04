@@ -71,11 +71,11 @@ body {
 
 			<!-- Nav Item - 예약 현황 Collapse Menu -->
 			<li class="nav-item"><a class="nav-link collapsed" href="#"
-				data-toggle="collapse" data-target="#collapseTwo"
-				aria-expanded="true" aria-controls="collapseTwo"> <i
+				data-toggle="collapse" data-target="#collapseOne"
+				aria-expanded="true" aria-controls="collapseOne"> <i
 					class="fas fa-fw fa-cog"></i> <span>예약 현황</span>
 			</a>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+				<div id="collapseOne" class="collapse" aria-labelledby="headingOne"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item" th:href="@{/getRoomReservationList}">객실
@@ -94,10 +94,6 @@ body {
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						
-						<a class="collapse-item" 
-						th:href="@{/getCancelList}">
-						예약 취소 리스트</a> 
 						
 						
 						<a class="collapse-item" 
@@ -141,8 +137,7 @@ body {
 				<div id="collapsePages" class="collapse"
 					aria-labelledby="headingPages" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/memberList}">회원 리스트</a> <a
-							class="collapse-item" th:href="@{/getQuestionList}">1:1 문의 관리</a>
+						<a class="collapse-item" th:href="@{/memberList}">회원 리스트</a> 
 					</div>
 				</div></li>
 						
