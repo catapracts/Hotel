@@ -5,7 +5,7 @@
 	<!-- Begin Page Content -->
 	<div class="container-fluid">
 		<!-- Page Heading -->
-		<h1 class="h3 mb-2 text-gray-800">방 정보 리스트</h1>
+		<h1 class="h3 mb-2 text-gray-800">회원 리스트</h1>
 		<p class="mb-4">
 			DataTables is a third party plugin that is used to generate the demo
 			table below. For more information about DataTables, please visit the
@@ -16,41 +16,28 @@
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">방 리스트</h6>
+				<h6 class="m-0 font-weight-bold text-primary">회원 리스트</h6>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-bordered" width="100%" cellspacing="0">
 						<thead>
 							<tr>
-								<th>방 번호</th>
-								<th>방 이름</th>
-								<th>방 유형</th>
-								<th>방 호수</th>
-								<th>방 가격</th>
-								<th>예약 가능 여부</th>
+								<th>회원번호</th>
+								<th>회원ID</th>
+								<th>이름</th>
+								<th>이메일</th>
+								<th>주소</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr th:each="room, loop:${paging}">
-			<td><a th:href="@{|/roomDetail/${room.rid}| }"
-				th:text="${room.rid}"> </a></td>
-
-			<td><span th:if="${room.rname != null}"
-				th:text="${room.rname}"> </span></td>
-
-			<td><span th:if="${room.rtype != null}"
-				th:text="${room.rtype}"> </span></td>
-				
-							<td><span th:if="${room.rnum != null}"
-				th:text="${room.rnum}"> </span></td>
-				
-							<td><span th:if="${room.rprice != null}"
-				th:text="${room.rprice}"> </span></td>
-				
-							<td><span th:if="${room.rstatus != null}"
-				th:text="${room.rstatus}"> </span></td>
-								
+							<tr th:each="memberDetail, loop:${paging}">
+								<td><a th:href="@{|/memberDetail/${memberDetail.seq}|}"
+									th:text="${memberDetail.seq}"></a></td>
+								<td th:text="${memberDetail.mid}"></td>
+								<td th:text="${memberDetail.mname}"></td>
+								<td th:text="${memberDetail.email}"></td>
+								<td th:text="${memberDetail.address}"></td>
 							</tr>
 						</tbody>
 					</table>

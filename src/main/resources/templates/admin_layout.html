@@ -82,19 +82,47 @@ body {
 							예약 리스트</a> <a class="collapse-item"
 							th:href="@{/getFacilityReservationList}">시설 예약 리스트</a>
 					</div>
+				</div>
+			</li>
+				
+			<!-- Nav Item - 취소 예약 현황 Collapse Menu -->
+			<li class="nav-item"><a class="nav-link collapsed" href="#"
+				data-toggle="collapse" data-target="#collapseTwo"
+				aria-expanded="true" aria-controls="collapseTwo"> <i
+					class="fas fa-fw fa-cog"></i> <span>취소 예약 현황</span>
+			</a>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						
+						<a class="collapse-item" 
+						th:href="@{/getCancelList}">
+						예약 취소 리스트</a> 
+						
+						
+						<a class="collapse-item" 
+						th:href="@{/getCancelRoomList}">
+						객실 취소 예약 리스트</a> 
+						
+						<a class="collapse-item"
+							th:href="@{/getCancelFacilityList}">
+							시설 취소 예약 리스트</a>
+							
+					</div>
 				</div></li>
 
-			<!-- Nav Item - 공실 현황 Collapse Menu -->
+
+			<!-- Nav Item - 방 & 시설 현황 Collapse Menu -->
 			<li class="nav-item"><a class="nav-link collapsed" href="#"
 				data-toggle="collapse" data-target="#collapseUtilities"
 				aria-expanded="true" aria-controls="collapseUtilities"> <i
-					class="fas fa-fw fa-wrench"></i> <span>공실 현황</span>
+					class="fas fa-fw fa-wrench"></i> <span>방 & 시설 관리</span>
 			</a>
 				<div id="collapseUtilities" class="collapse"
 					aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/getRoomStatus}">객실 현황</a> <a
-							class="collapse-item" th:href="@{/getFacilityStatus}">시설 현황</a>
+						<a class="collapse-item" th:href="@{/roomList}">객실 관리</a> <a
+							class="collapse-item" th:href="@{/facilityList}">시설 관리</a>
 					</div>
 				</div></li>
 

@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.hotel.Hotel.Base.Role;
+import com.hotel.Hotel.FacilityReservation.FacilityReservation;
 import com.hotel.Hotel.Reservation.Reservation;
+import com.hotel.Hotel.RoomReservation.RoomReservation;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -38,6 +40,10 @@ public class Member
 	
 	@OneToMany(mappedBy="member")
 	private List<Reservation> member = new ArrayList<>();
+
+	@OneToMany(mappedBy="rmember")
+	private List<RoomReservation> rmember = new ArrayList<>();
 	
-	
+	@OneToMany(mappedBy="fmember")
+	private List<FacilityReservation> fmember = new ArrayList<>();
 }

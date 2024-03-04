@@ -48,6 +48,14 @@ public class MemberService
 		member.setMname(name);
 		member.setEmail(email);
 		member.setAddress(address);
+		
+		if(mid == "admin")
+		{
+			member.setRole(Role.ADMIN);
+		}
+		
+		
+		
 		member.setRole(Role.USER);
 		
 		//validateDuplicateMember(member);
@@ -102,11 +110,9 @@ public class MemberService
 	}
 	
 	//유저 정보 삭제
-	public void delete(Member member)
-	{		
+	public void delete(int seq)
+	{
+		Member member = memberRepository.findById(seq).get();
 		memberRepository.delete(member);
 	}
-	
-	
-	
 }

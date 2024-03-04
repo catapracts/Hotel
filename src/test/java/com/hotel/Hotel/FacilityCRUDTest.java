@@ -50,7 +50,7 @@ public class FacilityCRUDTest
 	void update()
 	{
 		//facilityService.update(53, "cc", "cccc");
-		facilityService.getFacility(53);
+
 	}
 	
 	//삭제

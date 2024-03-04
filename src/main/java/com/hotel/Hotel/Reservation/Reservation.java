@@ -9,7 +9,6 @@ import com.hotel.Hotel.facility.Facility;
 import com.hotel.Hotel.member.Member;
 import com.hotel.Hotel.room.Room;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -54,6 +53,6 @@ public class Reservation
 	
 	@OneToOne(mappedBy = "r", fetch = FetchType.LAZY)
 	private Cancel cancel;
-	
+
 
 }

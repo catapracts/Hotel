@@ -254,7 +254,7 @@ public class MemberController
 		}
 				
 		// 삭제됨 
-		memberService.delete(m); 
+		memberService.delete(m.getSeq()); 
 		
 		if (principal.getName()!=null) 
 		{
