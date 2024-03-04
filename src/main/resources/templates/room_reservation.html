@@ -26,11 +26,11 @@
 }
 
 body {
-	font-family: 'SDSamliphopangche_Outline';
+	font-family: 'Noto Sans KR';
 }
 
 .p111 {
-	font-family: 'SDSamliphopangche_Outline';
+	font-family: 'Noto Sans KR';
 }
 </style>
 
@@ -45,13 +45,13 @@ body {
 							<div class="room-item">
 								<div class="room-pic-slider room-pic-item owl-carousel">
 									<div class="room-pic">
-										<img src="/img/bed(14).jpg" alt="">
+										<img src="/images/bed(14).jpg" alt="">
 									</div>
 									<div class="room-pic">
-										<img src="/img/bed(16).jpg" alt="">
+										<img src="/images/bed(16).jpg" alt="">
 									</div>
 									<div class="room-pic">
-										<img src="/img/bed(18).jpg" alt="">
+										<img src="/images/bed(18).jpg" alt="">
 									</div>
 								</div>
 							</div>
@@ -60,48 +60,48 @@ body {
 						<br>
 						<div class="col-lg-6">
 							<div class="check-form">
-								<h2>통합 방 예약</h2>
+								<h2 class="noto-sans">통합 방 예약</h2>
 								<form th:action="@{/createRoomReservation}"  method="post" th:object="${roomReservationCreateForm}">
 									
 									<div class="room-selector" for="rid">
-										<p>방 선택</p>
+										<p class="noto-sans">방 선택</p>
 										<select class="suit-select"
 										name="rid" id="rid" value="rid">
-											<option name="1.classic">1</option>
-											<option name="2.deluxe">2</option>
-											<option name="3.familiy">3</option>
-											<option name="4.luxury">4</option>
-											<option name="5.suite">5</option>
-											<option name="6.superior">6</option>
+											<option name="1.classic" class="noto-sans">1</option>
+											<option name="2.deluxe" class="noto-sans">2</option>
+											<option name="3.familiy" class="noto-sans">3</option>
+											<option name="4.luxury" class="noto-sans">4</option>
+											<option name="5.suite" class="noto-sans">5</option>
+											<option name="6.superior" class="noto-sans">6</option>
 										</select>
 									</div>
 
 									<div class="room-quantity">
 										<div class="single-quantity" for="cnt">
-											<p>인원</p>
+											<p class="noto-sans">인원</p>
 											<div class="pro-qty">
 												<input type="text"
-												name="cnt" id="cnt" value="cnt">
+												name="cnt" id="cnt" value="cnt" class="noto-sans">
 											</div>
 										</div>
 									</div>
 									
 									<div class="datepicker">
 										<div class="date-select" for="sdate">
-											<p>예약일</p>
-											<input type="date" class="datepicker-1"
-												name="sdate" id="sdate" value="sdate"> <img src="img/calendar.png"
+											<p class="noto-sans">예약일</p>
+											<input type="date" class="datepicker-1 noto-sans"
+												name="sdate" id="sdate" value="sdate" style="color: #999999;"> <img src="img/calendar.png"
 												alt="">
 										</div>
 										<div class="date-select to" for="edate">
-											<p>종료일</p>
+											<p class="noto-sans">종료일</p>
 											<input type="date" class="datepicker-2"
-												name="edate" id="edate" value="edate"> <img src="img/calendar.png"
+												name="edate" id="edate" value="edate" style="color: #999999;"> <img src="img/calendar.png"
 												alt="">
 										</div>
 									</div>
 									
-									<button type="submit">
+									<button type="submit" class="noto-sans">
 										예약하기 <i class="lnr lnr-arrow-right"></i>
 									</button>
 								</form>

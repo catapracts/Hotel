@@ -10068,13 +10068,12 @@
     font-weight: 400;
     color: #222222;
     border: 1px solid #D5D5D5;
-    border-left: none;
-    border-right: none;
     padding: 40px 0;
 }
 
 #roomsView #viewContets .cont_wrap .info_sec_02 .table_box table tr td:first-child {
     border-right: 1px solid #D5D5D5;
+    padding: 30px 30px 30px 30px;
 }
 
 #roomsView #viewContets .cont_wrap .info_sec_02 .table_box table tr td .td_box {

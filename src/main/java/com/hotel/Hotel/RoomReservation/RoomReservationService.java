@@ -16,6 +16,7 @@ import com.hotel.Hotel.Base.Status;
 import com.hotel.Hotel.cancelroom.CancelRoomService;
 import com.hotel.Hotel.member.Member;
 import com.hotel.Hotel.member.MemberRepository;
+import com.hotel.Hotel.member.MemberService;
 import com.hotel.Hotel.room.Room;
 import com.hotel.Hotel.room.RoomRepository;
 import com.hotel.Hotel.room.RoomService;
@@ -29,6 +30,7 @@ public class RoomReservationService
 	public final RoomReservationRepository roomReservationRepository;
 	public final RoomRepository roomRepository;
 	public final MemberRepository memberRepository;
+	public final MemberService memberService;
 	public final RoomService roomService;
 	public final CancelRoomService cancelRoomService;
 	
@@ -42,6 +44,7 @@ public class RoomReservationService
 
 		return room;
 	}
+
 
 	// 방 상태 보고 중복 예약 방지
 	// 예약하려는 방 id의 상태가 Available이면 예약 생성, Denied면 예약 방지

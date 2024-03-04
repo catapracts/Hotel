@@ -1,11 +1,34 @@
 package com.hotel.Hotel;
 
+import java.security.Principal;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.hotel.Hotel.FacilityReservation.FacilityReservationService;
+import com.hotel.Hotel.RoomReservation.RoomReservation;
+import com.hotel.Hotel.RoomReservation.RoomReservationRepository;
+import com.hotel.Hotel.RoomReservation.RoomReservationService;
+import com.hotel.Hotel.cancelfacility.CancelFacility;
+import com.hotel.Hotel.cancelfacility.CancelFacilityService;
+import com.hotel.Hotel.cancelroom.CancelRoom;
+import com.hotel.Hotel.cancelroom.CancelRoomService;
+import com.hotel.Hotel.member.Member;
+import com.hotel.Hotel.member.MemberService;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 @Controller
 public class MainController 
 {
+	private final MemberService memberService;
+	private final RoomReservationService roomReservationService;
+	private final RoomReservationRepository roomReservationRepository;
+	private final FacilityReservationService facilityReservationService;
+	private final CancelRoomService cancelRoomService;
+	private final CancelFacilityService cancelFacilityService;
 
     @GetMapping("/")
     public String main() 
@@ -131,8 +154,30 @@ public class MainController
     }
     
     @GetMapping("/myPage")
-    public String myCancmyPageleList() 
+    public String myPage
+    (
+    		Model model, 
+    		Principal principal 
+    ) 
     {
+    	// 현재 로그온한 계정을 가지고옴 
+    	System.out.println(principal.getName());
+    	
+    	// DB에서 Member 객체를 끄집어 냄. 
+    	Member m = memberService.getMember(principal.getName());
+    	System.out.println(m.getSeq());
+    	
+    	
+
+    	
+    	// Model 에 seq
+    	model.addAttribute("seq" , m.getSeq());
+    	
+    	// Model 에 Member 
+    	model.addAttribute("member" , m);
+    	
+
+    	
         return "myPage";
     }
     
