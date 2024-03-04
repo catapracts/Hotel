@@ -57,12 +57,14 @@ public class SecurityConfig
 		// 로그아웃 처리
 		.logout( (logout) -> logout
 				// /user/logout  
-				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+				.logoutRequestMatcher(new AntPathRequestMatcher("/Logout"))
 				
 				.logoutSuccessUrl("/")
 				 
 				.invalidateHttpSession(true)
-				); 
+				);
+		
+		http.csrf().disable(); 
 						
 		return http.build(); 
 	}
