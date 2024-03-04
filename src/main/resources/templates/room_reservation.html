@@ -1,7 +1,6 @@
 <html layout:decorate="~{layout2}">
 
 <th:block layout:fragment="content">
-
 	<!-- Css Styles -->
 	<link rel="stylesheet" href="css/bootstrap2.min.css" type="text/css">
 	<link rel="stylesheet" href="css/flaticon2.css" type="text/css">
@@ -13,7 +12,6 @@
 	<link rel="stylesheet" href="css/slicknav2.min.css" type="text/css">
 	<link rel="stylesheet" href="css/style2.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" />
-
 	<link rel="shortcut icon" type="image/x-icon"
 		href="/images/favicon.png">
 
@@ -37,83 +35,90 @@ body {
 </style>
 
 	<body>
-		<main>
-			<!-- Room Availability Section Begin -->
-			<section class="room-availability spad">
-				<div class="container">
-					<div class="room-check">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="room-item">
-									<div class="room-pic-slider room-pic-item owl-carousel">
-										<div class="room-pic">
-											<img src="/img/gym1.jpg" alt="">
-										</div>
-										<div class="room-pic">
-											<img src="/img/gym2.jpg" alt="">
-										</div>
+
+		<!-- Room Availability Section Begin -->
+		<section class="room-availability spad">
+			<div class="container">
+				<div class="room-check">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="room-item">
+								<div class="room-pic-slider room-pic-item owl-carousel">
+									<div class="room-pic">
+										<img src="/img/bed(14).jpg" alt="">
+									</div>
+									<div class="room-pic">
+										<img src="/img/bed(16).jpg" alt="">
+									</div>
+									<div class="room-pic">
+										<img src="/img/bed(18).jpg" alt="">
 									</div>
 								</div>
 							</div>
+						</div>
 
-							<br>
-							<div class="col-lg-6">
-								<div class="check-form">
-									<h2>헬스장 예약</h2>
-									<form action="#">
-										<div class="datepicker">
-											<div class="date-select">
-												<p>예약일</p>
-												<input type="text" class="datepicker-1"
-													value="dd / mm / yyyy"> <img src="img/calendar.png"
-													alt="">
-											</div>
+						<br>
+						<div class="col-lg-6">
+							<div class="check-form">
+								<h2>통합 방 예약</h2>
+								<form th:action="@{/createRoomReservation}"  method="post" th:object="${roomReservationCreateForm}">
+									
+									<div class="room-selector" for="rid">
+										<p>방 선택</p>
+										<select class="suit-select"
+										name="rid" id="rid" value="rid">
+											<option name="1.classic">1</option>
+											<option name="2.deluxe">2</option>
+											<option name="3.familiy">3</option>
+											<option name="4.luxury">4</option>
+											<option name="5.suite">5</option>
+											<option name="6.superior">6</option>
+										</select>
+									</div>
 
-										</div>
-										<div class="room-quantity">
-											<div class="single-quantity">
-												<p>성인</p>
-												<div class="pro-qty">
-													<input type="text" value="0">
-												</div>
+									<div class="room-quantity">
+										<div class="single-quantity" for="cnt">
+											<p>인원</p>
+											<div class="pro-qty">
+												<input type="text"
+												name="cnt" id="cnt" value="cnt">
 											</div>
-											<div class="single-quantity">
-												<p>아동</p>
-												<div class="pro-qty">
-													<input type="text" value="0">
-												</div>
-											</div>
-
 										</div>
-										<div class="room-selector">
-											<p>이용 시간</p>
-											<select class="suit-select">
-												<option>30분</option>
-												<option value="">1시간</option>
-												<option value="">2시간</option>
-												<option value="">3시간</option>
-											</select>
+									</div>
+									
+									<div class="datepicker">
+										<div class="date-select" for="sdate">
+											<p>예약일</p>
+											<input type="date" class="datepicker-1"
+												name="sdate" id="sdate" value="sdate"> <img src="img/calendar.png"
+												alt="">
 										</div>
-										<button type="button">
-											예약하기 <i class="lnr lnr-arrow-right"></i>
-										</button>
-									</form>
-								</div>
+										<div class="date-select to" for="edate">
+											<p>종료일</p>
+											<input type="date" class="datepicker-2"
+												name="edate" id="edate" value="edate"> <img src="img/calendar.png"
+												alt="">
+										</div>
+									</div>
+									
+									<button type="submit">
+										예약하기 <i class="lnr lnr-arrow-right"></i>
+									</button>
+								</form>
 							</div>
 						</div>
 					</div>
-					<br> <br> <br> <br> <br> <br> <br>
-					<br>
-					<div class="about-room">
-						<div class="row">
-							<div class="col-lg-10 offset-lg-1"></div>
-						</div>
-
-					</div>
 				</div>
-			</section>
-			<!-- Room Availability Section End -->
-		</main>
+				<br> <br> <br>
+				<div class="about-room">
+					<div class="row">
+						<div class="col-lg-10 offset-lg-1"></div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- Room Availability Section End -->
 	</body>
 </th:block>
 

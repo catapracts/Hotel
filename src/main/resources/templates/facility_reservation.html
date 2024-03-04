@@ -1,7 +1,7 @@
 <html layout:decorate="~{layout2}">
 
 <th:block layout:fragment="content">
-	<!-- Css Styles -->
+
 	<link rel="stylesheet" href="css/bootstrap2.min.css" type="text/css">
 	<link rel="stylesheet" href="css/flaticon2.css" type="text/css">
 	<link rel="stylesheet" href="css/linearicons2.css" type="text/css">
@@ -15,29 +15,7 @@
 	<link rel="shortcut icon" type="image/x-icon"
 		href="/images/favicon.png">
 
-	<style>
-@font-face {
-	font-family: 'SDSamliphopangche_Outline';
-	src:
-		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff')
-		format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-body {
-	font-family: 'SDSamliphopangche_Outline';
-}
-
-.p111 {
-	font-family: 'SDSamliphopangche_Outline';
-}
-</style>
-
 	<body>
-
-
-		<!-- Room Availability Section Begin -->
 		<section class="room-availability spad">
 			<div class="container">
 				<div class="room-check">
@@ -46,13 +24,13 @@ body {
 							<div class="room-item">
 								<div class="room-pic-slider room-pic-item owl-carousel">
 									<div class="room-pic">
-										<img src="/images/bed(15).jpg" alt="">
+										<img src="/img/golf1.jpg" alt="">
 									</div>
 									<div class="room-pic">
-										<img src="/images/2bed(9).jpg" alt="">
+										<img src="/img/golf2.jpg" alt="">
 									</div>
 									<div class="room-pic">
-										<img src="/images/2bed(8).jpg" alt="">
+										<img src="/img/golf5.jpg" alt="">
 									</div>
 								</div>
 							</div>
@@ -61,69 +39,65 @@ body {
 						<br>
 						<div class="col-lg-6">
 							<div class="check-form">
-								<h2>슈페리얼 룸 예약</h2>
-								<form action="#">
+								<h2>시설 통합 예약</h2>
+								<form th:action="@{/createFacilityReservation}"  method="post" th:object="${facilityReservationCreateForm}">
 									<div class="datepicker">
+									
+									<div class="room-selector">
+										<p for="fid">시설 번호</p>
+										<select class="suit-select"
+										name="fid" id="fid" value="fid">
+											<option value="fid">1</option>
+											<option value="fid">2</option>
+											<option value="fid">3</option>
+											<option value="fid">4</option>
+										</select>
+									</div>
+									
+									
 										<div class="date-select">
-											<p>예약일</p>
-											<input type="text" class="datepicker-1"
-												value="dd / mm / yyyy"> <img src="img/calendar.png"
+											<p for="date" >예약일</p>
+											<input type="date" class="datepicker-1"
+												name="date" id="date" value="date"> 
+												<img src="img/calendar.png"
 												alt="">
 										</div>
-										<div class="date-select to">
-											<p>종료일</p>
-											<input type="text" class="datepicker-2"
-												value="dd / mm / yyyy"> <img src="img/calendar.png"
-												alt="">
-										</div>
+
 									</div>
 									<div class="room-quantity">
 										<div class="single-quantity">
-											<p>어른</p>
+											<p for="cnt">인원</p>
 											<div class="pro-qty">
-												<input type="text" value="0">
+												<input type="text" 
+												name="cnt" id="cnt" value="cnt">
 											</div>
 										</div>
-										<div class="single-quantity">
-											<p>아동</p>
-											<div class="pro-qty">
-												<input type="text" value="0">
-											</div>
-										</div>
-										<div class="single-quantity last">
-											<p>조식</p>
-											<div class="pro-qty">
-												<input type="text" value="0">
-											</div>
-										</div>
+
 									</div>
-									<div class="room-selector">
-										<p>호수 선택</p>
-										<select class="suit-select">
-											<option selected>601</option>
-											<option>602</option>
-											<option value="">603</option>
-										</select>
-									</div>
+
+
 									<button type="button">
 										예약하기 <i class="lnr lnr-arrow-right"></i>
 									</button>
+									
 								</form>
 							</div>
 						</div>
 					</div>
-					<br> <br> <br> <br> <br> <br> <br>
-					<br>
-					<div class="about-room">
-						<div class="row">
-							<div class="col-lg-10 offset-lg-1"></div>
-						</div>
-
-					</div>
 				</div>
+				<br> <br> <br> <br> <br> <br> <br>
+				<br>
+				<div class="about-room">
+					<div class="row">
+						<div class="col-lg-10 offset-lg-1"></div>
+					</div>
+
+				</div>
+			</div>
 		</section>
 		<!-- Room Availability Section End -->
 	</body>
+	
 </th:block>
 
 <th:block layout:fragment="script">

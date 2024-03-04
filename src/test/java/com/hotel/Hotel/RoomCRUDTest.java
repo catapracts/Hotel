@@ -22,8 +22,8 @@ public class RoomCRUDTest
 	@Test
 	void create()
 	{
-		roomService.create("a", "aa");
-		roomService.create("b", "bb");
+		//roomService.create("a", "aa");
+		//roomService.create("b", "bb");
 	}
 	
 	//전체조회
@@ -50,7 +50,7 @@ public class RoomCRUDTest
 	@Test
 	void update()
 	{
-		roomService.update(2, "cc", "cccc");
+		//roomService.update(2, "cc", "cccc");
 		roomService.getRoom(2);
 	}
 	

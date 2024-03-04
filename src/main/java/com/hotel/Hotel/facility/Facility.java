@@ -3,10 +3,13 @@ package com.hotel.Hotel.facility;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.hotel.Hotel.Base.Status;
+import com.hotel.Hotel.FacilityReservation.FacilityReservation;
 import com.hotel.Hotel.Reservation.Reservation;
 
 import jakarta.persistence.Entity;
-
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -30,9 +33,15 @@ public class Facility
 	
 	private String ftype; //시설 유형
 	
-	private int cnt;// 시설 갯수?
+	private int fprice; // 시설 가격
+	
+	@Enumerated(EnumType.STRING)
+	private Status fstatus; //예약 가능 여부
 	
 	@OneToMany(mappedBy="facility")
 	private List<Reservation> facility = new ArrayList<>();
+	
+	@OneToMany(mappedBy="ffacility")
+	private List<FacilityReservation> ffacility = new ArrayList<>();
 	
 }

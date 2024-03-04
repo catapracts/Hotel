@@ -19,16 +19,16 @@ public class MainController
         return "admin";
     }
     
-    @GetMapping("/facility_list")
-    public String facility_list() 
+    @GetMapping("/facility_all")
+    public String facility_all() 
     {
-        return "facility_list";
+        return "facility_all";
     }
     
     @GetMapping("/bookFacility")
     public String bookFacility() 
     {
-        return "bookfacility";
+        return "bookFacility";
     }
     
     @GetMapping("/bookRoom")
@@ -37,10 +37,10 @@ public class MainController
         return "bookRoom";
     }
     
-    @GetMapping("/facility_golf_reservation")
-    public String facility_golf_reservation() 
+    @GetMapping("/facility_reservation")
+    public String facility_reservation() 
     {
-        return "facility_golf_reservation";
+        return "facility_reservation";
     }
     
     @GetMapping("/facility_golf")
@@ -48,24 +48,14 @@ public class MainController
     {
         return "facility_golf";
     }
-    
-    @GetMapping("/facility_health_reservation")
-    public String facility_health_reservation() 
-    {
-        return "facility_health_reservation";
-    }
+
     
     @GetMapping("/facility_health")
     public String facility_health() 
     {
         return "facility_health";
     }
-    
-    @GetMapping("/facility_pool_reservation")
-    public String facility_pool_reservation() 
-    {
-        return "facility_pool_reservation";
-    }
+
     
     @GetMapping("/facility_pool")
     public String facility_pool() 
@@ -73,28 +63,11 @@ public class MainController
         return "facility_pool";
     }
     
-    @GetMapping("/facility_restaurant_reservation")
-    public String facility_restaurant_reservation() 
-    {
-        return "facility_restaurant_reservation";
-    }
     
     @GetMapping("/facility_restaurant")
     public String facility_restaurant() 
     {
     	return "facility_restaurant";
-    }
-    
-    @GetMapping("/getCs")
-    public String getCs() 
-    {
-        return "getCs";
-    }
-    
-    @GetMapping("/getCsList")
-    public String getCsList() 
-    {
-        return "getCsList";
     }
     
     @GetMapping("/getFacilityCancle")
@@ -163,10 +136,10 @@ public class MainController
         return "myPage";
     }
     
-    @GetMapping("/room_list")
-    public String room_list() 
+    @GetMapping("/room_all")
+    public String room_all() 
     {
-        return "room_list";
+        return "room_all";
     }
     
     @GetMapping("/room_classic")
@@ -205,41 +178,12 @@ public class MainController
         return "room_superior";
     }
     
-    @GetMapping("/room_classic_reservation")
-    public String room_classic_reservation() 
+    @GetMapping("/room_reservation")
+    public String room_reservation() 
     {
-        return "room_classic_reservation";
+        return "room_reservation";
     }
-    
-    @GetMapping("/room_deluxe_reservation")
-    public String room_deluxe_reservation() 
-    {
-        return "room_deluxe_reservation";
-    }
-    
-    @GetMapping("/room_family_reservation")
-    public String room_family_reservation() 
-    {
-        return "room_family_reservation";
-    }
-    
-    @GetMapping("/room_luxury_reservation")
-    public String room_luxury_reservation() 
-    {
-        return "room_luxury_reservation";
-    }
-    
-    @GetMapping("/room_suite_reservation")
-    public String room_suite_reservation() 
-    {
-        return "room_suite_reservation";
-    }
-    
-    @GetMapping("/room_superior_reservation")
-    public String room_superior_reservation() 
-    {
-        return "room_superior_reservation";
-    }
+
     
     @GetMapping("/room")
     public String room() 
@@ -251,5 +195,17 @@ public class MainController
     public String updateCs() 
     {
         return "updateCs";
+    }
+    
+    @GetMapping("/getCs")
+    public String getCs() 
+    {
+        return "getCs";
+    }
+    
+    @GetMapping("/getCsList")
+    public String getCsList() 
+    {
+        return "getCsList";
     }
 }

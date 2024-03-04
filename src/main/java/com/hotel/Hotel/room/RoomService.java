@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import com.hotel.Hotel.Base.Status;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -19,11 +21,15 @@ public class RoomService
 	public final RoomRepository roomRepository;
 	
 	//방 생성
-	public Room create(String rname, String rtype)
+	public Room create(String rname, String rtype, int rnum, int rprice)
 	{
 		Room room = new Room();
 		room.setRname(rname);
 		room.setRtype(rtype);
+		room.setRnum(rnum); // 방 호수
+		room.setRprice(rprice); // 방 가격
+		room.setRstatus(Status.AVAILABLE); // 방 생성시에는 예약 가능한 상태
+		//예약 후에는 예약 불가능 상태로 변경
 		return roomRepository.save(room);
 	}
 	
@@ -31,14 +37,34 @@ public class RoomService
 	//방 정보 수정
 	public Room update
 	(
-			int rid, String rname, String rtype
+			int rid, String rname, String rtype, int rnum, int rprice
 	)
 	{
 		Room room = roomRepository.findById(rid).get();
 		room.setRname(rname);
 		room.setRtype(rtype);
+		room.setRnum(rnum);
+		room.setRprice(rprice);
 		return roomRepository.save(room);
 	}
+	
+	
+	//방 상태 변경 - 예약생성시 선택한 방id를 가지고 와서 상태를 변경
+	public Room rstatus(int rid)
+	{
+		Room room = roomRepository.findById(rid).get();
+		room.setRstatus(Status.DENIED);
+		return roomRepository.save(room); 
+	}
+
+	//방 상태 변경 - 예약취소(예약 삭제)시 선택한 방id를 가지고 와서 상태를 변경
+	public Room cstatus(int rid)
+	{
+		Room room = roomRepository.findById(rid).get();
+		room.setRstatus(Status.AVAILABLE);
+		return roomRepository.save(room); 
+	}
+	
 	
 	//방 1개 출력
 	public Room getRoom(int rid)

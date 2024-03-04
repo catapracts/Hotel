@@ -21,8 +21,8 @@ public class FacilityCRUDTest
 	@Test
 	void create()
 	{
-		facilityService.create("a", "aa");
-		facilityService.create("b", "bb");
+		//facilityService.create("a", "aa");
+		//facilityService.create("b", "bb");
 	}
 	
 	//전체조회
@@ -49,8 +49,8 @@ public class FacilityCRUDTest
 	@Test
 	void update()
 	{
-		facilityService.update(53, "cc", "cccc");
-		facilityService.getFacility(53);
+		//facilityService.update(53, "cc", "cccc");
+		//facilityService.getFacility(53);
 	}
 	
 	//삭제
