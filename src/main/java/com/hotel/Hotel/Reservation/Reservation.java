@@ -54,4 +54,5 @@ public class Reservation
 	@OneToOne(mappedBy = "r", fetch = FetchType.LAZY)
 	private Cancel cancel;
 
+
 }

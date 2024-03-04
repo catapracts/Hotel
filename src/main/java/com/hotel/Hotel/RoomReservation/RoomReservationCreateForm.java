@@ -13,10 +13,10 @@ public class RoomReservationCreateForm
 {
 	private int rid;
 	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	private Date sdate; //예약 시작일
 	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	private Date edate; //예약 종료일
 	
 	@NotEmpty(message="인원 수는 필수 입력 사항입니다.")

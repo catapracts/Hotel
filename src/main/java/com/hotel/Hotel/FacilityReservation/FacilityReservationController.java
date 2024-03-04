@@ -96,6 +96,7 @@ public class FacilityReservationController
 	)
 	{
 		System.out.println("###현재 로그온한 계정 : " + principal.getName());
+		System.out.println("FacilityReservationController 시작");
 		
 		//유효성 체크에 오류가 발생 되었을때 signup_form.html 에 그대로 머물면서 오류 코드를 출력
 		if (bindingResult.hasErrors() ) 
@@ -129,7 +130,7 @@ public class FacilityReservationController
 		//그외의 예외(오류) 가 발생되면 작동
 		catch(Exception e)
 		{
-			bindingResult.reject("siginupFailed", "알수 없는 오류 발생 ");
+			bindingResult.reject("duplicate", "날짜 중복 or 시설 중복 선택 발생, 다시 선택하세요.");
 			return "facilityReservation_Form";
 		}
 		
