@@ -65,12 +65,11 @@ public class CancelRoomService
  	}
  
  
- 	//방&시설 상세 페이지 - 취소 목록 1개 조회
+ 	//방 상세 페이지 - 취소 목록 1개 조회
  	public CancelRoom getCancelRoom(int seq)
  	{
  		return cancelRoomRepository.findById(seq).get();
  	}
- 
  
  	//방&시설 취소 삭제
  	public void deleteCancelRoom(CancelRoom cancel)

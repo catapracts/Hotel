@@ -7,42 +7,52 @@ font-style: normal;
 }
 
 *{
-    font-family: "Cinzel", serif;
+    font-family: "Cinzel", sans-serif;
 font-optical-sizing: auto;
 font-weight: weight;
 font-style: normal;
 }
 p{
-    font-family: "Cinzel", serif;
+    font-family: "Noto Sans KR", sans-serif;
 font-optical-sizing: auto;
 font-weight: weight;
 font-style: normal;
 }
 .mb-4{
-    font-family: "Cinzel", serif;
+    font-family: "Noto Sans KR", sans-serif;
 font-optical-sizing: auto;
 font-weight: weight;
 font-style: normal;
 }
 h2{
-    font-family: "Cinzel", serif;
+    font-family: "Noto Sans KR", sans-serif;
 font-optical-sizing: auto;
 font-weight: weight;
 font-style: normal;
 }
 a{
-    font-family: "Cinzel", serif;
-font-optical-sizing: auto;
-font-weight: weight;
-font-style: normal;
+     font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
+
+.noto-sans {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 body 
 {
-    font-family: "Cinzel", serif;
+    font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
-    font-style: normal;}	  .p111{
-    font-family: "Cinzel", serif;
+    font-style: normal;
+	}
+.p111{
+    font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;        }
@@ -9640,7 +9650,7 @@ font-style: normal;
 }
 
 #roomsView .slide_control .control_box .slide_info .slide_info_box {
-    font-family: 'Montserrat';
+    font-family: 'Cinzel';
     font-size: 14px;
     font-weight: 400;
     padding: 0 15px;
@@ -9989,7 +9999,7 @@ font-style: normal;
 }
 
 #roomsView #viewContets .cont_wrap .info_sec .info_list_box .info_box .info_tit {
-    font-family: 'Montserrat';
+    font-family: 'Cinzel';
     font-size: 16px;
     line-height: 16px;
     font-weight: 600;
@@ -10002,7 +10012,7 @@ font-style: normal;
 }
 
 #roomsView #viewContets .cont_wrap .info_sec .info_list_box .info_box .info_text {
-    font-family: 'Pretendard';
+    font-family: 'Noto Sans Kr';
     font-size: 18px;
     line-height: 28px;
     font-weight: 400;
@@ -18162,14 +18172,14 @@ table tr th span,table tr td span, .kor {
 }
 
  @font-face {
-    font-family: "NEXONLv1Gothic" !important;
+    font-family: "Noto Sans KR", sans-serif;
     font-weight: 300;
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff")
         format("woff");
     font-style: normal;
 }
 @font-face {
-    font-family: "NEXONLv1Gothic" !important;
+    font-family: "Noto Sans KR", sans-serif;
     font-weight: 400;
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
         format("woff");
@@ -18238,7 +18248,7 @@ animation: fadeOut 1s ease-in forwards; /* 초록색 배경이 3초 후에 사�
 /* info */
 .info {
 color: #765729;
-font-family: "NEXONLv1Gothic";
+font-family: "Noto Sans KR", sans-serif;
 padding: 20px;
 position: absolute;
 left: 45%;
@@ -22917,33 +22927,33 @@ display: none;
 }
 
 .navbar-light .navbar-brand {
-color: rgba(245, 237, 237, 0.9);
+color: rgba(245, 237, 237);
 }
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus {
-color: rgba(236, 233, 233, 0.9);
+color: rgba(236, 233, 233);
 }
 
 .navbar-light .navbar-nav .nav-link {
-color: rgba(233, 227, 227, 0.5);
+color: rgba(233, 227, 227);
 }
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
-color: rgba(243, 229, 229, 0.7);
+color: rgba(243, 229, 229);
 }
 .navbar-light .navbar-nav .nav-link.disabled {
-color: rgba(248, 244, 244, 0.3);
+color: rgba(248, 244, 244);
 }
 
 .navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-color: rgba(230, 221, 221, 0.9);
+color: rgba(230, 221, 221);
 }
 
 .navbar-light .navbar-toggler {
-color: rgba(243, 237, 237, 0.5);
+color: rgba(243, 237, 237);
 border-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -22952,14 +22962,14 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 }
 
 .navbar-light .navbar-text {
-color: rgba(214, 208, 208, 0.5);
+color: rgba(214, 208, 208);
 }
 .navbar-light .navbar-text a {
-color: rgba(201, 196, 196, 0.9);
+color: rgba(201, 196, 196);
 }
 .navbar-light .navbar-text a:hover,
 .navbar-light .navbar-text a:focus {
-color: rgba(243, 243, 243, 0.9);
+color: rgba(243, 243, 243);
 }
 
 .navbar-dark .navbar-brand {
@@ -22971,14 +22981,14 @@ color: #fff;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-color: rgba(255, 255, 255, 0.5);
+color: rgba(255, 255, 255);
 }
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
-color: rgba(255, 255, 255, 0.75);
+color: rgba(255, 255, 255);
 }
 .navbar-dark .navbar-nav .nav-link.disabled {
-color: rgba(255, 255, 255, 0.25);
+color: rgba(255, 255, 255);
 }
 
 .navbar-dark .navbar-nav .show > .nav-link,
@@ -22989,7 +22999,7 @@ color: #fff;
 }
 
 .navbar-dark .navbar-toggler {
-color: rgba(255, 255, 255, 0.5);
+color: rgba(255, 255, 255);
 border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -22998,7 +23008,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 }
 
 .navbar-dark .navbar-text {
-color: rgba(255, 255, 255, 0.5);
+color: rgba(255, 255, 255);
 }
 .navbar-dark .navbar-text a {
 color: #fff;
@@ -27905,7 +27915,7 @@ padding-left: 10px;
 padding-right: 10px;
 color: #765729(255, 255, 255, 0.7);
 font-weight: 400;
-opacity: 1 !important;
+opacity: 100% !important;
 
 }
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
@@ -28251,8 +28261,6 @@ font-size: 50px;
 font-size: 26px;
 text-transform: uppercase;
 letter-spacing: 2px;
-font-family: "Poppins", Arial, sans-serif;
-font-weight: 200;
 color: rgba(255, 255, 255, 0.8);
 display: inline-block;
 position: relative;
@@ -28523,7 +28531,7 @@ font-size: 12px;
 border-radius: 0px;
 -webkit-box-shadow: none !important;
 box-shadow: none !important;
-font-family: "NEXONLv1Gothic";
+font-family: "Noto Sans KR", sans-serif;
 }
 .booking-form .form-control::-webkit-input-placeholder {
 /* Chrome/Opera/Safari */
@@ -28622,8 +28630,6 @@ transition: all 0.3s ease;
 -ms-border-radius: 5px;
 border-radius: 5px;
 margin-bottom: 40px;
-    -webkit-box-shadow: 2px 15px 75px 6px #ECECEC;
-    box-shadow: 2px 15px 75px 6px #ECECEC;
 }
 .services .icon {
 line-height: 1.3;
@@ -29474,8 +29480,6 @@ background-position: center center;
 height: 250px;
 position: relative;
 display: block;
--webkit-box-shadow: 2px 15px 75px 6px #ECECEC;
-	box-shadow: 2px 15px 75px 6px #ECECEC;
 }
 
 @media (min-width: 768px) {
@@ -30202,7 +30206,7 @@ align-items: center;
 justify-content: start;
 }
 body {
-font-family: "Raleway", sans-serif;
+font-family: "NEXON Lv1 Gothic OTF";
 font-weight: normal;
 font-style: normal;
 }
@@ -30213,8 +30217,6 @@ max-width: 100%;
 -o-transition: 0.3s;
 transition: 0.3s;
 margin-top: 30px;
--webkit-box-shadow: 2px 2px 2px 2px #ECECEC;
-box-shadow: 2px 2px 7px 6px #ECECEC;
 border-radius: 3px;
 }
 
@@ -30224,9 +30226,6 @@ border-radius: 3px;
 -o-transition: 0.3s;
 transition: 0.3s;
 margin-top: 30px;
--webkit-box-shadow: 2px 2px 2px 2px #ECECEC;
-box-shadow: 2px 2px 7px 6px #ECECEC;
-border-radius: 3px;
 }
 a:focus,
 .button:focus,
@@ -30608,10 +30607,11 @@ top: 11px;
 }
 .slicknav_menu .slicknav_nav a:hover {
 background: transparent;
-color: #009dff;
+color: #21312c;
+font-weight: border;
 }
 .slicknav_menu .slicknav_nav a.active {
-color: #009dff;
+color: #21312c;
 }
 @media (max-width: 767px) {
 .slicknav_menu .slicknav_nav a i {
@@ -30792,8 +30792,8 @@ color: #fff;
 }
 .header-area .main-header-area .book_room .book_btn a:hover {
 background: #fff;
-color: #009dff;
-border: 1px solid #009dff;
+color: #21312c;
+border: 1px solid #21312c;
 }
 .header-area .main-header-area .main-menu {
 text-align: center;
@@ -31436,7 +31436,7 @@ opacity: 0;
 visibility: hidden;
 }
 .features_room .rooms_here .single_rooms .room_thumb .room_heading a:hover {
-color: #009dff;
+color: #21312c;
 }
 .features_room .rooms_here .single_rooms:hover img {
 width: 100%;

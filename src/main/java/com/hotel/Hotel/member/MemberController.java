@@ -95,13 +95,6 @@ public class MemberController
 	{
 		return "Login";
 	}
-	
-//	@GetMapping("/Logout")
-//	public String Logout() 
-//	{
-//		return "redirect:/";
-//	}
-//	
 
 
 	//http://localhost:9000/memberList

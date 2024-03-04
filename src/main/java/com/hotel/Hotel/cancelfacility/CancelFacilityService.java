@@ -63,13 +63,14 @@ public class CancelFacilityService
  	}
  
  
- 	//방&시설 상세 페이지 - 취소 목록 1개 조회
+ 	//시설 상세 페이지 - 취소 목록 1개 조회
  	public CancelFacility getFacilityCancel(int seq)
  	{
  		return cancelFacilityRepository.findById(seq).get();
  	}
- 
- 
+ 	
+
+
  	//방&시설 취소 삭제
  	public void deleteFacilityCancel(CancelFacility cancelFacility)
  	{

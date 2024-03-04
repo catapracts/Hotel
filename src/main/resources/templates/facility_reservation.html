@@ -39,26 +39,26 @@
 						<br>
 						<div class="col-lg-6">
 							<div class="check-form">
-								<h2>시설 통합 예약</h2>
+								<h2 class="noto-sans">시설 통합 예약</h2>
 								<form th:action="@{/createFacilityReservation}"  method="post" th:object="${facilityReservationCreateForm}">
 									<div class="datepicker">
 									
 									<div class="room-selector">
-										<p for="fid">시설 번호</p>
+										<p for="fid" class="noto-sans">시설 번호</p>
 										<select class="suit-select"
 										name="fid" id="fid" value="fid">
-											<option value="fid">1</option>
-											<option value="fid">2</option>
-											<option value="fid">3</option>
-											<option value="fid">4</option>
+											<option value="fid" class="noto-sans">1</option>
+											<option value="fid" class="noto-sans">2</option>
+											<option value="fid" class="noto-sans">3</option>
+											<option value="fid" class="noto-sans">4</option>
 										</select>
 									</div>
 									
 									
 										<div class="date-select">
-											<p for="date" >예약일</p>
-											<input type="date" class="datepicker-1"
-												name="date" id="date" value="date"> 
+											<p for="date" class="noto-sans">예약일</p>
+											<input type="date" class="datepicker-1 noto-sans"
+												name="date" id="date" value="date" style="color: #999999;"> 
 												<img src="img/calendar.png"
 												alt="">
 										</div>
@@ -66,7 +66,7 @@
 									</div>
 									<div class="room-quantity">
 										<div class="single-quantity">
-											<p for="cnt">인원</p>
+											<p for="cnt" class="noto-sans">인원</p>
 											<div class="pro-qty">
 												<input type="text" 
 												name="cnt" id="cnt" value="cnt">
@@ -76,7 +76,7 @@
 									</div>
 
 
-									<button type="button">
+									<button type="button" class="noto-sans">
 										예약하기 <i class="lnr lnr-arrow-right"></i>
 									</button>
 									
