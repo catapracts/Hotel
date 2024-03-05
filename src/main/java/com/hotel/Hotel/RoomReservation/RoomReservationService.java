@@ -73,7 +73,7 @@ public class RoomReservationService
 		System.out.println("날짜 중복 확인 시작");
 		
 		// 전체 방 예약 목록 중 날짜 겹치는 거 조회
-		for (int i = 202; i <= 205; i++) 
+		for (int i = 1; i <= 10; i++) 
 		{
 			roomReservation = roomReservationRepository.findById(i).get();
 			
@@ -154,6 +154,12 @@ public class RoomReservationService
 	public RoomReservation getRoomReservation(int seq) 
 	{
 		return roomReservationRepository.findById(seq).get();
+	}
+	
+	// 상세 페이지 - 예약 1개 조회
+	public RoomReservation getRoomReservation(Member member) 
+	{
+		return roomReservationRepository.findByRmember(member).get();
 	}
 
 	// 예약 수정

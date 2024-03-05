@@ -2,6 +2,8 @@ package com.hotel.Hotel.answer;
 
 import java.time.LocalDateTime;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.hotel.Hotel.member.Member;
 import com.hotel.Hotel.question.Question;
 
@@ -27,7 +29,10 @@ public class Answer {
 	@Column(length=20000)
 	private String content;
 	
+	@DateTimeFormat(pattern = "yyyy-mm-dd HH:MM")
 	private LocalDateTime regdate;
+	
+	@DateTimeFormat(pattern = "yyyy-mm-dd HH:MM")
 	private LocalDateTime modifyDate;
 	
 	// 답변이 등록될 원본 질문 글

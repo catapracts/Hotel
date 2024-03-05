@@ -90,7 +90,7 @@ public class ReservationService
 		
 		System.out.println("날짜 계산 시작");
 		
-		for (int i = 102; i <= 1000; i++) 
+		for (int i = 1; i <= 10; i++) 
 		{
 			reservation = reservationRepository.findById(i).get();
 			

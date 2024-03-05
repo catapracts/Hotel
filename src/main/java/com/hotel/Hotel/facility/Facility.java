@@ -26,7 +26,7 @@ import lombok.ToString;
 public class Facility 
 {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int fid; //시설 번호 PK
 	
 	private String fname; //시설 이름

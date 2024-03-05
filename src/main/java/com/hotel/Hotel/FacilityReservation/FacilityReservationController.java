@@ -70,7 +70,7 @@ public class FacilityReservationController
 		
 		System.out.println(facilityReservation.getSeq());
 		
-		model.addAttribute("FacilityReservation" , facilityReservation);
+		model.addAttribute("facilityReservation" , facilityReservation);
 		
 		return "facilityReservation_detail";
 	}
@@ -101,7 +101,7 @@ public class FacilityReservationController
 		//유효성 체크에 오류가 발생 되었을때 signup_form.html 에 그대로 머물면서 오류 코드를 출력
 		if (bindingResult.hasErrors() ) 
 		{
-			return "facilityReservation_Form"; 
+			return "facility_reservation"; 
 		}
 		
 		Member member = memberService.getMember(principal.getName());
@@ -124,14 +124,14 @@ public class FacilityReservationController
 		catch(DataIntegrityViolationException e)
 		{
 			bindingResult.reject("siginupFailed", "이미 있는 예약 입니다.");
-			return "facilityReservation_Form";
+			return "facility_reservation";
 		}
 		
 		//그외의 예외(오류) 가 발생되면 작동
 		catch(Exception e)
 		{
 			bindingResult.reject("duplicate", "날짜 중복 or 시설 중복 선택 발생, 다시 선택하세요.");
-			return "facilityReservation_Form";
+			return "facility_reservation";
 		}
 		
 		return "redirect:/getFacilityReservationList";
@@ -151,7 +151,7 @@ public class FacilityReservationController
 		facilityReservationForm.setDate(facilityReservation.getDate());
 		facilityReservationForm.setCnt(facilityReservation.getCnt());
 		
-		return "facilityReservation_Form2";
+		return "facilityReservation_form2";
 	}
 	
 
@@ -169,7 +169,7 @@ public class FacilityReservationController
 		// reservationForm 에 주입된 값을 확인 
 		if (bindingResult.hasErrors()) 
 		{
-			return "FacilityReservation_Form2" ; 
+			return "FacilityReservation_form2" ; 
 		}
 		
 		FacilityReservation facilityReservation = facilityReservationService.getFacilityReservation(seq);

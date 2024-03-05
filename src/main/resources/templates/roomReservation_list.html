@@ -32,14 +32,19 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr th:each="RoomReservation, loop:${paging}">
-								<td><a th:href="@{|/RoomReservationDetail/${RoomReservation.seq}|}"
-									th:text="${RoomReservation.seq}"></a></td>
-								<td th:if="${RoomReservation.rmember != null}" th:text="${RoomReservation.rmember}"></td>
-								<td th:text="${RoomReservation.rroom}"></td>
-								<td th:text="${RoomReservation.sdate}"></td>
-								<td th:text="${RoomReservation.edate}"></td>
-								<td th:text="${RoomReservation.cnt}"></td>
+							<tr th:each="roomReservation, loop:${paging}">
+								<td><a th:href="@{|/roomReservationDetail/${roomReservation.seq}|}"
+									th:text="${roomReservation.seq}"></a></td>
+									
+								<td th:if="${roomReservation.rmember.mid != null}" 
+								th:text="${roomReservation.rmember.mid}"></td>
+								
+								<td th:if="${roomReservation.rroom.rid != null}"
+								th:text="${roomReservation.rroom.rid}"></td>
+								
+								<td th:text="${roomReservation.sdate}"></td>
+								<td th:text="${roomReservation.edate}"></td>
+								<td th:text="${roomReservation.cnt}"></td>
 							</tr>
 						</tbody>
 					</table>
@@ -70,7 +75,7 @@
 					<!-- 페이징처리 끝 -->
 
 					<!-- 검색시 변수 값을 hidden 에 적용해서 서버로 전송  -->
-					<form th:action="@{/roomBookList}" method="get"
+					<form th:action="@{/roomreservation/getList}" method="get"
 						id="searchForm">
 						<input type="hidden" name="kw" id="kw" th:value="${kw}"> <input
 							type="hidden" name="page" id="page" th:value="${paging.number}">

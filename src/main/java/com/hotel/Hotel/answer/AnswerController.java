@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.hotel.Hotel.member.Member;
+import com.hotel.Hotel.member.MemberService;
 import com.hotel.Hotel.question.Question;
 import com.hotel.Hotel.question.QuestionService;
 
@@ -25,6 +26,7 @@ public class AnswerController {
 
 	private final AnswerService answerService;
 	private final QuestionService questionService;
+	private final MemberService memberService;
 
 	// 답변 등록 처리
 	// 앵커 태그를 사용해서 등록 이후 그 위치로 이동 <== 수정됨 - 2월 1일
@@ -36,14 +38,14 @@ public class AnswerController {
 
 		// 뷰에서 인증된 사용자 정보를 가지고 오는 객체
 		// 인증된 계정 정보가 출력
-		// System.out.println("뷰에서 인증된 계정 정보를 출력 : " + principal.getName());
+		System.out.println("뷰에서 인증된 계정 정보를 출력 : " + principal.getName());
 
 		Question question = questionService.get(aid);
 
 		if (bindingResult.hasErrors()) {
 
 			model.addAttribute("question", question);
-			return "getQuestion";
+			return "getCs";
 
 			// 메세지 출력 안하고 새롭게 리다이렉트로 이동됨
 			// return String.format("redirect:/question/detail/%s", id);
@@ -54,12 +56,12 @@ public class AnswerController {
 
 		// principal.getName() : 현재로그인 한 사용자 정보가 넘어옴.
 		// 수정 추가됨
-		Member member = new Member();
+		Member member = memberService.getMember(principal.getName());
 
 		// 수정됨
 		Answer answer = answerService.create(aid, answerForm.getContent(), member);
 
-		return String.format("redirect:/question/detail/%s#answer_%s", answer.getQuestion().getQid(), answer.getAid());
+		return String.format("redirect:/detail/%s#answer_%s", answer.getQuestion().getQid(), answer.getAid());
 	}
 
 	// 답변을 수정할 수 있는 뷰 페이지전송

@@ -28,7 +28,7 @@ import lombok.ToString;
 public class Reservation 
 {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int seq; //예약 번호, PK
 
 	@ManyToOne

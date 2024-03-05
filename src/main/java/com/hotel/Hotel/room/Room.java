@@ -26,7 +26,7 @@ import lombok.ToString;
 public class Room 
 {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int rid; //방 번호 PK
 	
 	private String rname; //방 이름

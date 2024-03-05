@@ -60,11 +60,33 @@
 			</div>
 		</div>
 		<a class="btn btn-dark" th:href="@{/getRoomReservationList}">뒤로가기</a>
+		<a th:href="@{|/updateRoomReservation/${roomReservation.seq}|}" 
+        th:if ="${roomReservation.seq != null and 
+        #authentication.getPrincipal().getUsername() == roomReservation.rmember.mid}"           	
+        th:text ="수정"
+        class="btn btn-dark"></a>
+	    
+	    <a href="javascript:void(0)"
+	    th:data-uri="@{|/deleteRoomReservation/${roomReservation.seq}|}"	           		
+        th:if ="${roomReservation.seq != null and 
+        #authentication.getPrincipal().getUsername() == roomReservation.rmember.mid}"
+	    th:text="삭제"
+	    class="delete btn btn-dark"></a>
 	</div>
 	<!-- /.container-fluid -->
 	<!-- End of Main Content -->
 	
-	
+	<script layout:fragment="script" type='text/javascript'>
+const delete_elements = document.getElementsByClassName("delete");
+Array.from(delete_elements).forEach(function(element) {
+    element.addEventListener('click', function() {
+        if(confirm("정말로 삭제하시겠습니까?")) {
+            location.href = this.dataset.uri;
+        };
+    });
+});
+
+</script>
 
 	
 	

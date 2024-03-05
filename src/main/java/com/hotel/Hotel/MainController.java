@@ -117,11 +117,6 @@ public class MainController
         return "getRoomCancle";
     }
     
-    @GetMapping("/insertCs")
-    public String insertCs() 
-    {
-        return "insertCs";
-    }
     
     @GetMapping("/join")
     public String join() 
@@ -141,17 +136,14 @@ public class MainController
         return "payment2";
     }
     
-    @GetMapping("/myBookList")
-    public String myBookList() 
-    {
-        return "myBookList";
-    }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     @GetMapping("/myCancleList")
     public String myCancleList() 
     {
         return "myCancleList";
     }
+    
     
     @GetMapping("/myPage")
     public String myPage
@@ -166,20 +158,57 @@ public class MainController
     	// DB에서 Member 객체를 끄집어 냄. 
     	Member m = memberService.getMember(principal.getName());
     	System.out.println(m.getSeq());
-    	
-    	
 
-    	
     	// Model 에 seq
     	model.addAttribute("seq" , m.getSeq());
     	
     	// Model 에 Member 
     	model.addAttribute("member" , m);
-    	
 
-    	
         return "myPage";
     }
+    
+    @GetMapping("/myBookList_room")
+    public String myBookList_room
+    (
+    		Model model, 
+    		Principal principal
+    ) 
+    {
+    	// 현재 로그온한 계정을 가지고옴 
+    	System.out.println(principal.getName());
+    	
+    	Member m = memberService.getMember(principal.getName());
+    	System.out.println(m.getSeq());
+    	
+    	// DB에서 RoomReservation 객체를 끄집어 냄. 
+    	
+    	RoomReservation rr = roomReservationService.getRoomReservation(m);
+    	System.out.println(rr.getSeq());
+
+    	// Model 에 seq
+    	model.addAttribute("seq" , rr.getSeq());
+    	
+    	// Model 에 Member 
+    	model.addAttribute("roomReservation" , rr);
+    	
+        return "myBookList_room";
+    }
+    
+    @GetMapping("/myBookList_facility")
+    public String myBookList_facility
+    (
+    		Model model, 
+    		Principal principal
+    ) 
+    {
+    	// 현재 로그온한 계정을 가지고옴 
+    	System.out.println(principal.getName());
+    	
+        return "myBookList_facility";
+    }
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     @GetMapping("/room_all")
     public String room_all() 
@@ -235,22 +264,5 @@ public class MainController
     {
         return "room";
     }
-    
-    @GetMapping("/updateCs")
-    public String updateCs() 
-    {
-        return "updateCs";
-    }
-    
-    @GetMapping("/getCs")
-    public String getCs() 
-    {
-        return "getCs";
-    }
-    
-    @GetMapping("/getCsList")
-    public String getCsList() 
-    {
-        return "getCsList";
-    }
+
 }

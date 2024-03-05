@@ -1,12 +1,15 @@
 package com.hotel.Hotel.RoomReservation;
 
 import java.util.Date;
+import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+
+import com.hotel.Hotel.member.Member;
 
 public interface RoomReservationRepository extends JpaRepository<RoomReservation, Integer>
 {
@@ -21,6 +24,7 @@ public interface RoomReservationRepository extends JpaRepository<RoomReservation
 	// Page : 페이징을 처리하기 위한 클래스 
 	// Pageable : 페이징 처리하는 인터페이스 
 	Page<RoomReservation> findAll(Pageable pageable);
+	Optional<RoomReservation> findByRmember(Member member);
 	
 	
 //	//예약 날짜 중복 확인

@@ -4,6 +4,7 @@ import java.security.Principal;
 
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,14 +16,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.hotel.Hotel.member.Member;
+import com.hotel.Hotel.member.MemberService;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-@RequestMapping("/cs") // 하위 @GetMapping, @PostMapping 의 prefix 가 적용됨
 @RequiredArgsConstructor
 @Controller
-public class QuestionController {
+public class QuestionController 
+{
 
 	// @Autowired : 타입으로 객체를 주입함. 동일한 타입이 주입될 수 있다. , JUnit Test
 
@@ -30,10 +32,11 @@ public class QuestionController {
 	// private final CsRepository CsRepository;
 
 	private final QuestionService questionService;
+	private final MemberService memberService;
 
 	// 질문 등록 하기 : 글 등로 뷰 페이지만 전송
 	// http://localhost:8585/question/create
-	@GetMapping("/create")
+	@GetMapping("/insertCs")
 	public String create(QuestionForm QuestionForm) {
 		return "insertCs";
 	}
@@ -42,17 +45,25 @@ public class QuestionController {
 	// 인증된 사용자만 접근 가능
 	// <=== Spring Security 설정 :SecurityConfig.java ,
 	// @EnableMethodSecurity(prePostEnabled=true)
-	// @PreAuthorize("isAuthenticated()")
-	@PostMapping("/create")
-	public String create(
+	@PreAuthorize("isAuthenticated()")
+	@PostMapping("/insertCs")
+	public String create
+	(
 //					@RequestParam("title") String title, 
 //					@RequestParam("content") String content
-			@Valid QuestionForm QuestionForm, BindingResult bindingResult) {
-
-		Member member = new Member();
+			@Valid QuestionForm QuestionForm, 
+			BindingResult bindingResult,
+			Principal principal
+	) 
+	{
+		System.out.println(principal.getName());
+		Member member = memberService.getMember(principal.getName());
 		System.out.println("###현재 로그온한 계정 : " + member.getSeq());
+		System.out.println("###현재 로그온한 계정 : " + member.getMid());
 
-		if (bindingResult.hasFieldErrors()) {
+		if (bindingResult.hasFieldErrors()) 
+		{
+			System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 			return "insertCs";
 		}
 
@@ -62,11 +73,11 @@ public class QuestionController {
 
 		questionService.create(QuestionForm.getTitle(), QuestionForm.getContent(), member);
 
-		return "redirect:/cs/list";
+		return "redirect:/getCsList";
 	}
 
 	// http://localhost:8585/Cs/list
-	@GetMapping("/list")
+	@GetMapping("/getCsList")
 	// @ResponseBody
 	public String getList(Model model, @RequestParam(value = "page", defaultValue = "0") int page
 //		@RequestParam(value = "kw", defaultValue = "") String kw
@@ -168,7 +179,7 @@ public class QuestionController {
 		questionService.update(q, QuestionForm.getTitle(), QuestionForm.getContent());
 
 		// 수정 이후에 이동할 페이지
-		return String.format("redirect:/cs/detail/%s", qid);
+		return String.format("redirect:/detail/%s", qid);
 	}
 
 	// 삭제 요청에 대한 처리
