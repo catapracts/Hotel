@@ -813,7 +813,6 @@ font-style: normal;
 }
 
 .top_btn.on {
-    display: ;
     position: absolute;
     bottom: 460px;
     right: 40px;
@@ -1242,7 +1241,6 @@ font-style: normal;
 #packageList #viewContets .cont_wrap #sec01 {
     position: relative;
     width: 100%;
-    height: ;
     background: #ffffff;
 }
 
@@ -1594,7 +1592,6 @@ font-style: normal;
 #promotionList #viewContets .cont_wrap #sec01 {
     position: relative;
     width: 100%;
-    height: ;
     background: #ffffff;
 }
 
@@ -5547,7 +5544,6 @@ font-style: normal;
 #Notice #viewContets .cont_wrap #sec01 {
     position: relative;
     width: 100%;
-    height: ;
     background: #ffffff;
 }
 
@@ -23347,16 +23343,14 @@ display: block;
 padding: 0.5rem 0.75rem;
 margin-left: -1px;
 line-height: 1.25;
-color: #78d5ef;
-background-color: #fff;
-border: 1px solid #dee2e6;
+color: white;
+background-color: #21312c;
 }
 .page-link:hover {
 z-index: 2;
-color: #34c0e7;
+color: #21312c;
 text-decoration: none;
-background-color: #e9ecef;
-border-color: #dee2e6;
+background-color: white;
 }
 .page-link:focus {
 z-index: 2;
@@ -23381,17 +23375,15 @@ border-bottom-right-radius: 0.25rem;
 
 .page-item.active .page-link {
 z-index: 1;
-color: #fff;
-background-color: #78d5ef;
-border-color: #78d5ef;
+color: #21312c;
+background-color: white;
 }
 
 .page-item.disabled .page-link {
 color: #6c757d;
 pointer-events: none;
 cursor: auto;
-background-color: #fff;
-border-color: #dee2e6;
+background-color: #21312c;
 }
 
 .pagination-lg .page-link {
@@ -28469,8 +28461,6 @@ padding-right: 60px;
 border: 2px solid  whitesmoke;
 background-color: whitesmoke;
 border-radius: 10px;
--webkit-box-shadow: 2px 15px 75px 6px #ECECEC;
-	box-shadow: 2px 15px 75px 6px #ECECEC;
 
 }
 .booking-form {
@@ -30352,11 +30342,11 @@ z-index: 0;
 .overlay::before {
 position: absolute;
 content: "";
-background-color: #1f1f1f;
+background-color: #21312c;
 top: 0;
 left: 0;
 width: 100%;
-height: 100%;
+height: 50%;
 z-index: -1;
 opacity: 0.5;
 }

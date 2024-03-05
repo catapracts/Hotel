@@ -25,7 +25,7 @@ import lombok.ToString;
 public class CancelRoom 
 {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int seq; //취소 목록 번호, PK
 	
 	@OneToOne(fetch = FetchType.LAZY)

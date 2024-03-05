@@ -6,7 +6,7 @@
 	<!-- Begin Page Content -->
 	<div class="container-fluid">
 		<!-- Page Heading -->
-		<h1 class="h3 mb-2 text-gray-800">객실 예약 자세히 보기</h1>
+		<h1 class="h3 mb-2 text-gray-800">시설 예약 자세히 보기</h1>
 
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
@@ -55,12 +55,34 @@
 				</div>
 			</div>
 		</div>
-		<a class="btn btn-dark" th:href="@{/getRoomReservationList}">뒤로가기</a>
+		<a class="btn btn-dark" th:href="@{/getFacilityReservationList}">뒤로가기</a>
+		
+		<a th:href="@{|/updateFacilityReservation/${facilityReservation.seq}|}" 
+        th:if ="${facilityReservation.seq != null and 
+        #authentication.getPrincipal().getUsername() == facilityReservation.fmember.mid}"           	
+        th:text ="수정"
+        class="btn btn-dark"></a>
+	    
+	    <a href="javascript:void(0)"
+	    th:data-uri="@{|/deleteFacilityReservation/${facilityReservation.seq}|}"	           		
+        th:if ="${facilityReservation.seq != null and 
+        #authentication.getPrincipal().getUsername() == facilityReservation.fmember.mid}"
+	    th:text="삭제"
+	    class="delete btn btn-dark"></a>
 	</div>
 	<!-- /.container-fluid -->
 	<!-- End of Main Content -->
 	
-	
+<script layout:fragment="script" type='text/javascript'>
+const delete_elements = document.getElementsByClassName("delete");
+Array.from(delete_elements).forEach(function(element) {
+    element.addEventListener('click', function() {
+        if(confirm("정말로 삭제하시겠습니까?")) {
+            location.href = this.dataset.uri;
+        };
+    });
+});
+</script>
 
 	
 	

@@ -60,13 +60,13 @@ body {
 						<br>
 						<div class="col-lg-6">
 							<div class="check-form">
-								<h2 class="noto-sans">통합 방 예약</h2>
-								<form th:action="@{/createRoomReservation}"  method="post" th:object="${roomReservationCreateForm}">
-									
+								<h2 class="noto-sans">객실 예약</h2>
+								<form th:action="@{/createRoomReservation}" method="post"
+									th:object="${roomReservationCreateForm}">
+
 									<div class="room-selector" for="rid">
 										<p class="noto-sans">방 선택</p>
-										<select class="suit-select"
-										name="rid" id="rid" value="rid">
+										<select class="suit-select" name="rid" id="rid" value="rid">
 											<option name="1.classic" class="noto-sans">1</option>
 											<option name="2.deluxe" class="noto-sans">2</option>
 											<option name="3.familiy" class="noto-sans">3</option>
@@ -75,32 +75,32 @@ body {
 											<option name="6.superior" class="noto-sans">6</option>
 										</select>
 									</div>
-
-									<div class="room-quantity">
-										<div class="single-quantity" for="cnt">
-											<p class="noto-sans">인원</p>
-											<div class="pro-qty">
-												<input type="text"
-												name="cnt" id="cnt" value="cnt" class="noto-sans">
+									<div class="room-selector" for="rid">
+										<div class="room-quantity">
+											<div class="single-quantity" for="cnt">
+												<p class="noto-sans">인원</p>
+												<div class="pro-qty">
+													<input type="text" name="cnt" id="cnt" value=""
+														class="noto-sans">
+												</div>
 											</div>
 										</div>
 									</div>
-									
-									<div class="datepicker">
+									<div class="room-selector" for="rid">
 										<div class="date-select" for="sdate">
 											<p class="noto-sans">예약일</p>
-											<input type="date" class="datepicker-1 noto-sans"
-												name="sdate" id="sdate" value="sdate" style="color: #999999;"> <img src="img/calendar.png"
-												alt="">
+											<input type="date" class="noto-sans" name="sdate" id="sdate"
+												value="sdate">
 										</div>
+<br>
 										<div class="date-select to" for="edate">
 											<p class="noto-sans">종료일</p>
-											<input type="date" class="datepicker-2"
-												name="edate" id="edate" value="edate" style="color: #999999;"> <img src="img/calendar.png"
-												alt="">
+											<input type="date" class="noto-sans" name="edate" id="edate"
+												value="edate">
 										</div>
 									</div>
-									
+									<br>
+
 									<button type="submit" class="noto-sans">
 										예약하기 <i class="lnr lnr-arrow-right"></i>
 									</button>

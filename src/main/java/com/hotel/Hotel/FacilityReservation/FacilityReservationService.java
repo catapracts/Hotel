@@ -64,7 +64,7 @@ public class FacilityReservationService
  		System.out.println("시설 예약 날짜 계산 시작");
  		
 		// 전체 방 예약 목록 중 날짜 겹치는 거 조회
-		for (int i = 1; i <= 5; i++) 
+		for (int i = 1; i <= 10; i++) 
 		{
 			facilityReservation = facilityReservationRepository.findById(i).get();
 			

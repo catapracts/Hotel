@@ -69,31 +69,27 @@
 	<br />
 
 	<div class="container">
-		<h2>게시판 글쓰기</h2>
-		<form action="write.jsp" method="post">
-			<div class="form-group">
-				<label for="title">제목</label>
-				<!-- placeholder 속성 입력한 데이터가 없는 경우 배경으로 나타난다.실제적으로 입력을 100자까지로 지정 -->
-				<!-- required 속성을 설정하면 필수입력 사항이된다. -->
-				<!-- pattern 속성을 이용한 정규표현식으로 데이터의 유효성 검사를 할 수 있다. -->
-				<input type="text" class="form-control" id="title"
-					placeholder="제목 입력(4-100)" name="title" maxlength="100"
-					required="required" pattern=".{4,100}">
-			</div>
-			<div class="form-group">
-				<label for="content">내용</label>
-				<!--  여러줄의 데이터를 입력하고 하고자 할때 textarea 태그를 사용한다. -->
-				<!--  textarea 안에 있는 모든 글자는 그대로 나타난다. 공백문자, tag, enter -->
-				<textarea class="form-control" rows="5" id="content" name="content"
-					placeholder="내용 작성"></textarea>
-			</div>
-			<div class="form-group">
-				<label for="writer">작성자</label> <input type="text"
-					class="form-control" id="writer" placeholder="작성자(2자-10자)"
-					name="writer">
-			</div>
-			<button type="submit" class="btn btn-default">등록</button>
-		</form>
+		<h2>문의하기</h2>
+		<form method="post" th:object="${questionForm}">
+
+   
+    	<!-- 
+    	<div class="alert alert-danger" role="alert" th:if ="${#fields.hasAnyErrors()}">
+    		<div th:each ="err : ${#fields.allErrors()}" th:text="${err}"> </div>
+       	</div>
+        -->
+        
+        <div class="mb-3">
+            <label for="title" class="form-label">제목</label>
+            <input type="text" name="title" id="title" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">내용</label>
+            <textarea name="content" id="content" class="form-control" rows="10"></textarea>
+        </div>
+        
+        <input type="submit" value="저장하기" class="btn btn-primary my-2">
+    </form>
 	</div>
 	<!-- Blog Section End -->
 </th:block>
@@ -101,14 +97,14 @@
 <th:block layout:fragment="script">
 
 	<!-- Js Plugins -->
-	<script src="js/jquery-3.3.1.min2.js"></script>
-	<script src="js/bootstrap.min2.js"></script>
-	<script src="js/jquery.magnific-popup.min2.js"></script>
-	<script src="js/jquery-ui.min2.js"></script>
-	<script src="js/jquery.nice-select2.min.js"></script>
-	<script src="js/jquery.slicknav2.js"></script>
-	<script src="js/owl.carousel2.min.js"></script>
-	<script src="js/main2.js"></script>
+	<script th:src="@{/js/jquery-3.3.1.min2.js}"></script>
+	<script th:src="@{/js/bootstrap.min2.js}"></script>
+	<script th:src="@{/js/jquery.magnific-popup.min2.js}"></script>
+	<script th:src="@{/js/jquery-ui.min2.js}"></script>
+	<script th:src="@{/js/jquery.nice-select2.min.js}"></script>
+	<script th:src="@{/js/jquery.slicknav2.js}"></script>
+	<script th:src="@{/js/owl.carousel2.min.js}"></script>
+	<script th:src="@{/js/main2.js}"></script>
 	
 </th:block>
 

@@ -21,7 +21,7 @@ import lombok.ToString;
 public class Member
 {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int seq; //회원 번호, PK
 	
 	private String mid; //회원 id

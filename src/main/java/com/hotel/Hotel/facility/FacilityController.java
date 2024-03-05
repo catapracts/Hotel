@@ -41,7 +41,7 @@ public class FacilityController
 		//유효성 체크에 오류가 발생 되었을때 signup_form.html 에 그대로 머물면서 오류 코드를 출력
 		if (bindingResult.hasErrors() ) 
 		{
-			return "facility_Form"; 
+			return "facility_form"; 
 		}
 		
 		try
@@ -58,13 +58,13 @@ public class FacilityController
 		catch(DataIntegrityViolationException e)
 		{
 			bindingResult.reject("facilityCreateFailed", "이미 등록된 정보 입니다.");
-			return "facility_Form";
+			return "facility_form";
 		}
 		
 		catch(Exception e)
 		{
 			bindingResult.reject("facilityCreateFailed", "알수 없는 오류 발생 ");
-			return "facility_Form";			
+			return "facility_form";			
 		}
 		
 		return "redirect:/facilityList";

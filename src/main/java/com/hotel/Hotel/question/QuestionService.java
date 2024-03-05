@@ -32,6 +32,7 @@ public class QuestionService {
 		q.setTitle(title);
 		q.setContent(content);
 		q.setMember(member);
+		q.setRegdate(LocalDateTime.now());
 
 		questionRepository.save(q);
 	}
@@ -55,7 +56,7 @@ public class QuestionService {
 		// page : 요청하는 페이지 번호, 10 : 한페이지에서 출력 하는 레코드 갯수
 		// Sort : 정렬을 위한 객체
 		List<Sort.Order> sorts = new ArrayList<>();
-		sorts.add(Sort.Order.desc("createDate"));
+		sorts.add(Sort.Order.desc("regdate"));
 
 		Pageable pageable = PageRequest.of(page, 10, Sort.by(sorts));
 

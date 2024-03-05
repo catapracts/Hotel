@@ -76,7 +76,7 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2 class="mb-4">시설 설명</h2>
+					<h2 class="mb-4">우리의 시설</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -85,7 +85,7 @@
 
 				<div class="col-sm col-md-6 col-lg-3 ftco-animate">
 					<div class="room">
-						<a href="facility_golf_reservation.html"
+						<a th:href="@{/facility_golf}"
 							class="img d-flex justify-content-center align-items-center"
 							style="background-image: url(img/golf4.jpg)">
 							<div
@@ -95,7 +95,7 @@
 						</a>
 						<div class="text p-3 text-center">
 							<h3 class="mb-3">
-								<a href="facility_golf.html">골프장</a>
+								<a th:href="@{/facility_golf}">골프장</a>
 							</h3>
 							&nbsp;
 							<p>
@@ -104,7 +104,7 @@
 							</p>
 							<hr />
 							<p class="pt-1">
-								<a href="facility_golf.html" class="btn-custom">
+								<a th:href="@{/facility_golf}" class="btn-custom">
 									<ul>
 										<li class="info_list noto-sans">운영 시간 : 주중 06:00~22:30 |
 											주말 및 공휴일 06:00~22:00 (매월 두 번째, 네 번째 월요일 정기 휴관)</li>
@@ -113,7 +113,7 @@
 											5000여 평으로 투숙객, 골프장 이용 고객님들의 골프장 사용에 불편함이 없으시도록 준비되어 있는 크라운 호텔
 											골프장 입니다.</p>
 
-									</ul> <a href="facility_golf.html" class="primary-btn noto-sans">Book
+									</ul> <a th:href="@{/facility_golf}" class="primary-btn noto-sans">Book
 										Now <i class="lnr lnr-arrow-right"></i>
 								</a> <span class="icon-long-arrow-right"></span>
 								</a>
@@ -123,7 +123,7 @@
 				</div>
 				<div class="col-sm col-md-6 col-lg-3 ftco-animate">
 					<div class="room">
-						<a href="facility_pool.html"
+						<a th:href="@{/facility_pool}"
 							class="img d-flex justify-content-center align-items-center"
 							style="background-image: url(img/swim3.jpg)">
 							<div
@@ -133,7 +133,7 @@
 						</a>
 						<div class="text p-3 text-center">
 							<h3 class="mb-3">
-								<a href="facility_pool_reservation.html">수영장</a>
+								<a th:href="@{/facility_pool}">수영장</a>
 							</h3>
 							&nbsp;
 							<p>
@@ -142,7 +142,7 @@
 							</p>
 							<hr />
 							<p class="pt-1">
-								<a href="facility_pool.html" class="btn-custom">
+								<a th:href="@{/facility_pool}" class="btn-custom">
 									<ul>
 										<li class="info_list noto-sans">운영 시간 : 주중 및 주말 06:00 ~
 											21:30 (매월 두 번째, 네 번째 월요일 정기 휴관)</li>
@@ -159,7 +159,7 @@
 											또한 3000명 이상 수용 가능한 넓은 수영장에 어린이들이 놀 수 있는 키즈존과 서핑존도 준비되어 있는 크라운
 											호텔 수영장 입니다.</p>
 
-									</ul> <a href="facility_pool.html" class="primary-btn noto-sans">Book
+									</ul> <a th:href="@{/facility_pool}" class="primary-btn noto-sans">Book
 										Now <i class="lnr lnr-arrow-right"></i>
 								</a> <span class="icon-long-arrow-right"></span>
 								</a>
@@ -170,7 +170,7 @@
 
 				<div class="col-sm col-md-6 col-lg-3 ftco-animate">
 					<div class="room">
-						<a href="facility_health.html"
+						<a th:href="@{/facility_health}"
 							class="img d-flex justify-content-center align-items-center"
 							style="background-image: url(images/health\(3\).jpg)">
 							<div
@@ -178,9 +178,10 @@
 								<span class="icon-search2"></span>
 							</div>
 						</a>
+						
 						<div class="text p-3 text-center">
 							<h3 class="mb-3">
-								<a href="facility_health.html">헬스장</a>
+								<a th:href="@{/facility_health}">헬스장</a>
 							</h3>
 							&nbsp;
 							<p>
@@ -189,7 +190,7 @@
 							</p>
 							<hr />
 							<p class="pt-1">
-								<a href="facility_health_reservation.html" class="btn-custom">
+								<a th:href="@{/facility_health}" class="btn-custom">
 									<ul>
 										<li class="info_list noto-sans">운영 시간 : 주중 06:00 ~ 22:00
 											| 주말 및 공휴일 06:00 ~ 21:30 (매월 두 번째, 네 번째 월요일 정기 휴관)</li>
@@ -199,7 +200,7 @@
 											없으시도록 준비해놓았습니다. 30여가지 이상의 다양한 운동기구를 마음껏 이용하실 수 있는 크라운 호텔 헬스장
 											입니다.</p>
 
-									</ul> <a href="facility_health_reservation.html"
+									</ul> <a th:href="@{/facility_health}"
 									class="primary-btn noto-sans">Book Now <i
 										class="lnr lnr-arrow-right"></i>
 								</a> <span class="icon-long-arrow-right"></span>
@@ -211,7 +212,7 @@
 
 				<div class="col-sm col-md-6 col-lg-3 ftco-animate">
 					<div class="room">
-						<a href="facility_health.html"
+						<a th:href="@{/facility_restaurant}"
 							class="img d-flex justify-content-center align-items-center"
 							style="background-image: url(images/menu-3.jpg)">
 							<div
@@ -221,7 +222,7 @@
 						</a>
 						<div class="text p-3 text-center">
 							<h3 class="mb-3">
-								<a href="facility_health.html">식당</a>
+								<a th:href="@{/facility_restaurant}">식당</a>
 							</h3>
 							&nbsp;
 							<p>
@@ -230,7 +231,7 @@
 							</p>
 							<hr />
 							<p class="pt-1">
-								<a href="facility_health_reservation.html" class="btn-custom">
+								<a th:href="@{/facility_restaurant}" class="btn-custom">
 									<ul>
 										<li class="info_list noto-sans">운영 시간 : 주중 16:00 ~ 22:00
 											| 주말 및 공휴일 16:00 ~ 21:30 (매월 두 번째, 네 번째 월요일 정기 휴관)</li>
@@ -239,7 +240,7 @@
 											양식, 누들, 콜드밀(Cold Meal), 코리안 그릴, 디저트, BAR 등 8개의 라이브 섹션에서 다양한
 											요리를 맛볼 수 있는 스튜디오 타입의 라이브 키친입니다.</p>
 
-									</ul> <a href="facility_health_reservation.html"
+									</ul> <a th:href="@{/facility_restaurant}"
 									class="primary-btn noto-sans">Book Now <i
 										class="lnr lnr-arrow-right"></i>
 								</a> <span class="icon-long-arrow-right"></span>
